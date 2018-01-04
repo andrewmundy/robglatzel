@@ -23,7 +23,7 @@ export default {
   background-size: cover;
 }
 body{
-  background: linear-gradient(10deg,rgb(179, 233, 255), rgb(255, 137, 107)) no-repeat center center fixed;
+  background: linear-gradient(10deg,rgb(255, 118, 54), rgb(255, 137, 107)) no-repeat center center fixed;
   background-size: cover;
   margin: 0px;
   padding: 0px;

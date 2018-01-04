@@ -11,11 +11,11 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <style>
-            .move{animation: move 60s infinite;}
+            .move{animation: move 100s infinite;}
 
-            .move2{animation: move2 60s infinite;}
+            .move2{animation: move2 100s infinite;}
 
-            .move3{animation: move3 60s infinite;}
+            .move3{animation: move3 100s infinite;}
 
             @keyframes move3{
                 0%{
