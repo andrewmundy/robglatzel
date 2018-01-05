@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg 
-    
-    preserveAspectRatio="none"
-    viewBox="0 0 1280 700"
+    viewBox="0 0 1280 800"
     version="1.1" 
     xmlns="http://www.w3.org/2000/svg" 
     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -11,36 +9,30 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <style>
-            .move{animation: move 100s infinite;}
-
-            .move2{animation: move2 100s infinite;}
-
-            .move3{animation: move3 100s infinite;}
-
-            @keyframes move3{
-                0%{
-                }
-                50%{
-                    transform:scale(1.2);
-                }
-                100%{
-                }
+            .move{
+                animation: move 40s infinite ease-in-out;
             }
-            @keyframes move2{
-                0%{
-                }
-                50%{
-                    transform: translate(-10%,2%) scale(1.2);
-                }
-                100%{
-                }
-            }
-            
+
             @keyframes move{
                 0%{
+                    
                 }
                 50%{
-                    transform: translate(1%,-20%) scale(1.1);
+                    transform: rotate(5deg);
+                }
+                100%{
+                }
+            }
+            .scale{
+                animation: scale 120s infinite ease-in-out;
+            }
+
+            @keyframes scale{
+                0%{
+                    
+                }
+                50%{
+                    transform: scale(0.9);
                 }
                 100%{
                 }
@@ -79,10 +71,10 @@
                 <use xlink:href="#path-3"></use>
             </mask>
             <!-- <use id="Rectangle-2" fill="url(#linearGradient-2)" xlink:href="#path-3"></use> -->
-            <ellipse class="move" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" cx="1234.5" cy="315" rx="238.5" ry="251"></ellipse>
-            <path class="move2" d="M642,498.191176 C778.135062,454.83413 1013.13506,433.103738 1347,433 L1347,862 L0,862 C291.864938,662.817831 505.864938,541.548223 642,498.191176 Z" id="Rectangle-3" fill="url(#linearGradient-6)" mask="url(#mask-4)"></path>
-            <path class="" d="M878.5,581 C1010.21991,581 1117,331.737272 1117,193.073311 C1117,54.4093504 1010.21991,-58 878.5,-58 C746.780087,-58 640,54.4093504 640,193.073311 C640,331.737272 746.780087,581 878.5,581 Z" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" transform="translate(878.500000, 261.500000) rotate(-60.000000) translate(-878.500000, -261.500000) "></path>
-            <ellipse class="move3" id="Oval" fill="url(#linearGradient-7)" mask="url(#mask-4)" cx="381.5" cy="377.5" rx="356.5" ry="375.5"></ellipse>
+            <ellipse class="move" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" cx="1013.5" cy="279" rx="238.5" ry="251"></ellipse>
+            <path class="" d="M642,498.191176 C778.135062,454.83413 1013.13506,433.103738 1347,433 L1347,862 L0,862 C291.864938,662.817831 505.864938,541.548223 642,498.191176 Z" id="Rectangle-3" fill="url(#linearGradient-6)" mask="url(#mask-4)"></path>
+            <path class="scale" d="M883.945117,634.797059 C1015.66503,634.797059 1122.44512,385.534331 1122.44512,246.87037 C1122.44512,108.206409 1015.66503,-4.2029412 883.945117,-4.2029412 C752.225204,-4.2029412 645.445117,108.206409 645.445117,246.87037 C645.445117,385.534331 752.225204,634.797059 883.945117,634.797059 Z" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" transform="translate(878.500000, 261.500000) rotate(-60.000000) translate(-878.500000, -261.500000)"></path>
+            <ellipse class="" id="Oval" fill="url(#linearGradient-7)" mask="url(#mask-4)" cx="381.5" cy="377.5" rx="356.5" ry="375.5"></ellipse>
         </g>
     </g>
 </svg>

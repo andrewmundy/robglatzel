@@ -17,7 +17,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* height: 100vh; */
   padding: 0px;
   background: url("./assets/Background.svg") no-repeat center center fixed;
   background-size: cover;
@@ -27,10 +26,24 @@ body{
   background-size: cover;
   margin: 0px;
   padding: 0px;
-  height: 100vh;
+  
 }
 h1{
   color:white;
   font-weight: 800;
+}
+h2{
+  color:rgba(255, 255, 255, 0.719);
+}
+
+
+
+@media screen and (max-device-width: 1024px){
+  body{
+    background: linear-gradient(10deg,rgb(139, 185, 255), rgb(225, 107, 255));
+  }
+  #app{
+    background-position: 0 0;
+  }
 }
 </style>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="836px" height="232px" viewBox="0 0 850 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>AM</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Backgrounds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Screen1" transform="translate(-1042.000000, -317.000000)" fill="#FFFFFF">
+            <g id="Laptop" transform="translate(639.000000, 59.000000)">
+                <g id="Group" transform="translate(403.000000, 238.000000)">
+                    <g id="AM">
+                        <g id="AM-logo-white" transform="translate(0.000000, 20.000000)">
+                            <g id="AM-logo">
+                                <path d="M69.8671807,48.5648225 L57.5,11.1290323 L34.3145161,11.1290323 L11.1290323,11.1290323 L11.1290323,218.870968 L57.5,218.870968 L57.5,151.495205 L79.7580645,218.870968 L102.943548,218.870968 L126.129032,218.870968 L148.387097,151.495205 L148.387097,218.870968 L194.758065,218.870968 L194.758065,11.1290323 L171.572581,11.1290323 L148.387097,11.1290323 L130.640341,64.8489417 L69.8671807,48.5648225 Z M87.2667472,101.233781 L116.070658,108.951765 L102.943548,148.687881 L87.2667472,101.233781 Z M0,0 L81.6129032,0 L89.0322581,20.4032258 L127.983871,31.5322581 L139.112903,0 L230,0 L230,230 L0,230 L0,0 Z" id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                        <g id="ANDREW-MUNDY!" transform="translate(260.000000, 0.000000)" font-size="132" font-family="SFProDisplay-Heavy, SF Pro Display" line-spacing="135" font-weight="600">
+                            <text>
+                                <tspan x="0" y="126">ANDREW </tspan>
+                                <tspan x="0" y="261">MUNDY!</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
