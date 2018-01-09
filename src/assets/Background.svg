@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg 
-    viewBox="0 0 1280 800"
-    version="1.1" 
-    xmlns="http://www.w3.org/2000/svg" 
-    xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+<svg viewBox="0 0 1500 1500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Background</title>
-    <desc>Created with Sketch.</desc>
     <defs>
         <style>
             .move{
@@ -48,7 +42,6 @@
             <stop stop-color="#FFB300" offset="0%"></stop>
             <stop stop-color="#FF6497" offset="100%"></stop>
         </linearGradient>
-        <rect id="path-3" x="0" y="0" width="1280" height="800"></rect>
         <linearGradient x1="83.4518362%" y1="111.177135%" x2="26.5921921%" y2="-5.37901962%" id="linearGradient-5">
             <stop stop-color="#FFB300" offset="0%"></stop>
             <stop stop-color="#FF7A6E" offset="16.9016473%"></stop>
@@ -68,12 +61,12 @@
         <g id="Background">
             <!-- <rect id="Rectangle-2" fill="url(#linearGradient-1)" x="0" y="0" width="100%" height="100%"></rect> -->
             <mask id="mask-4" fill="white">
-                <use xlink:href="#path-3"></use>
+                <rect x="0" y="0" width="1280" height="800"></rect>
             </mask>
             <!-- <use id="Rectangle-2" fill="url(#linearGradient-2)" xlink:href="#path-3"></use> -->
-            <ellipse class="move" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" cx="1013.5" cy="279" rx="238.5" ry="251"></ellipse>
+            <ellipse class="" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" cx="1013.5" cy="279" rx="238.5" ry="251"></ellipse>
             <path class="" d="M642,498.191176 C778.135062,454.83413 1013.13506,433.103738 1347,433 L1347,862 L0,862 C291.864938,662.817831 505.864938,541.548223 642,498.191176 Z" id="Rectangle-3" fill="url(#linearGradient-6)" mask="url(#mask-4)"></path>
-            <path class="scale" d="M883.945117,634.797059 C1015.66503,634.797059 1122.44512,385.534331 1122.44512,246.87037 C1122.44512,108.206409 1015.66503,-4.2029412 883.945117,-4.2029412 C752.225204,-4.2029412 645.445117,108.206409 645.445117,246.87037 C645.445117,385.534331 752.225204,634.797059 883.945117,634.797059 Z" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" transform="translate(878.500000, 261.500000) rotate(-60.000000) translate(-878.500000, -261.500000)"></path>
+            <path class="" d="M883.945117,634.797059 C1015.66503,634.797059 1122.44512,385.534331 1122.44512,246.87037 C1122.44512,108.206409 1015.66503,-4.2029412 883.945117,-4.2029412 C752.225204,-4.2029412 645.445117,108.206409 645.445117,246.87037 C645.445117,385.534331 752.225204,634.797059 883.945117,634.797059 Z" id="Oval-2" fill="url(#linearGradient-5)" mask="url(#mask-4)" transform="translate(878.500000, 261.500000) rotate(-60.000000) translate(-878.500000, -261.500000)"></path>
             <ellipse class="" id="Oval" fill="url(#linearGradient-7)" mask="url(#mask-4)" cx="381.5" cy="377.5" rx="356.5" ry="375.5"></ellipse>
         </g>
     </g>

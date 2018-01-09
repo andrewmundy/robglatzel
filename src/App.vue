@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'app'
 }
@@ -18,15 +19,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   padding: 0px;
-  background: url("./assets/Background.svg") no-repeat center center fixed;
-  background-size: cover;
+  background: url("./assets/Background1.svg");
+  /* background-size: cover; */
+  height:100%;
 }
 body{
-  background: linear-gradient(10deg,rgb(255, 118, 54), rgb(255, 137, 107)) no-repeat center center fixed;
-  background-size: cover;
+  background: linear-gradient(10deg, rgb(139, 185, 255),rgb(255, 107, 188));
   margin: 0px;
   padding: 0px;
-  
 }
 h1{
   color:white;
@@ -35,7 +35,14 @@ h1{
 h2{
   color:rgba(255, 255, 255, 0.719);
 }
-
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color:inherit;
+}
+button{
+  cursor: pointer;
+}
 
 
 @media screen and (max-device-width: 1024px){
@@ -43,7 +50,7 @@ h2{
     background: linear-gradient(10deg,rgb(139, 185, 255), rgb(225, 107, 255));
   }
   #app{
-    background-position: 0 0;
+    background-position: -400px 500px;
   }
 }
 </style>
