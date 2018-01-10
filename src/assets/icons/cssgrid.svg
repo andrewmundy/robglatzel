@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="477px" height="477px" viewBox="0 0 477 477" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>cssgrid</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="477" height="477" rx="47"></rect>
+    </defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tech" transform="translate(-567.000000, -138.000000)">
+            <g id="cssgrid" transform="translate(567.000000, 138.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Rectangle-5" fill="#000000" xlink:href="#path-1"></use>
+                <text id="GRID" mask="url(#mask-2)" font-family="SFProDisplay-Heavy, SF Pro Display" font-size="180" font-weight="600" letter-spacing="11.5384569" fill="#FFFFFF">
+                    <tspan x="6" y="358">GRID</tspan>
+                </text>
+                <text id="CSS" mask="url(#mask-2)" transform="translate(176.599057, 48.239785) rotate(-5.000000) translate(-176.599057, -48.239785) " font-family="SFProDisplay-Heavy, SF Pro Display" font-size="200" font-weight="600" fill="#FFFFFF">
+                    <tspan x="-26.4009429" y="119.239785">CSS</tspan>
+                </text>
+                <rect id="Rectangle" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="391" width="477" height="18"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" mask="url(#mask-2)" x="0" y="181" width="477" height="18"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

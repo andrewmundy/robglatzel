@@ -12,6 +12,9 @@ export default {
 </script>
 
 <style>
+html{
+  background:rgb(24, 24, 24);
+}
 #app {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   -webkit-font-smoothing: antialiased;
@@ -19,12 +22,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   padding: 0px;
-  background: url("./assets/Background1.svg");
-  /* background-size: cover; */
-  height:100%;
+  background: url("./assets/Background2:2.svg");
+  background-size: cover;
+  overflow:hidden;
 }
 body{
-  background: linear-gradient(10deg, rgb(139, 185, 255),rgb(255, 107, 188));
+  background:linear-gradient(10deg, rgb(139, 185, 255),rgb(255, 107, 188));
+  background-size: cover;
   margin: 0px;
   padding: 0px;
 }
@@ -43,6 +47,9 @@ a{
 button{
   cursor: pointer;
 }
+li{
+  list-style: none;
+}
 
 
 @media screen and (max-device-width: 1024px){
@@ -50,7 +57,7 @@ button{
     background: linear-gradient(10deg,rgb(139, 185, 255), rgb(225, 107, 255));
   }
   #app{
-    background-position: -400px 500px;
+    background-position: -200px 200px;
   }
 }
 </style>

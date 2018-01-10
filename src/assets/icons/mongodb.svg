@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="448px" viewBox="0 0 384 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>mongodb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tech" transform="translate(0.000000, -196.000000)">
+            <g id="mongodb" transform="translate(0.000000, 196.000000)">
+                <polygon id="Shape" fill="#000000" fill-rule="nonzero" points="0 0 34.9 395.8 192 448 349.1 395.8 384 0"></polygon>
+                <path d="M190.201258,58 C186.750928,61.562827 184.251074,64.0972551 182.701695,65.6032842 C158.554454,89.0749246 142.945741,108.841785 135.278818,125.734041 C98.4382116,206.903619 117.553918,292.164909 190.201258,331 C261.005615,292.406743 279.988077,207.693339 244.719778,127.271752 C237.223052,110.177119 221.515386,89.6209627 197.59678,65.6032842 C196.007694,64.0076162 193.54252,61.4731882 190.201258,58 Z" id="Path-2" stroke="#FFFFFF" stroke-width="18.2"></path>
+                <path d="M190,65 C190,168.733333 190,254.4 190,322 C286,256.4 286,170.733333 190,65 Z" id="Path-2" fill="#FFFFFF"></path>
+                <polygon id="Path-3" stroke="#FFFFFF" stroke-width="18.2" points="191.829787 330 188 378 193 380 197 378 192.595745 330"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
