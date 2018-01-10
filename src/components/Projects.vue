@@ -258,7 +258,8 @@ export default {
 
 @media screen and (max-device-width: 1024px){
     .project{
-        width: 40vw;
+        width: 42vw;
+        margin: 0.4rem;
         /* background:none; */
     }
     .project img{
@@ -276,6 +277,7 @@ export default {
     .text{
         font-size:0.1rem;
         width: 100%;
+        padding:0;
     }
     .text h1, .text h2{
         font-size: 1rem;
@@ -288,6 +290,12 @@ export default {
     .quote{
         font-size:25px;
         padding:1rem;
+    }
+    .badges{
+        padding:20px 10px;
+    }
+    .badges *{
+        width: 20px;
     }
 }
 </style>
