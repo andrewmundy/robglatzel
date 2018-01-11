@@ -19,11 +19,11 @@
             </a>
         </div>
         <div class="project">
-            <a href="https://www.ceelow.herokuapp.com/">
+            <a href="https://ceelow.herokuapp.com/">
             <img src="../assets/projects/ceelo.png">
             <div class="text">
                 <h1>Cee-Lo</h1>
-                <h2>Virtual Dice, Real IOU's</h2>
+                <h2>Virtual Dice, Real Ended Friendships</h2>
                 <div class="badges">
                     <img src="../assets/icons/vuejs.svg">
                     <img src="../assets/icons/html5.svg">
