@@ -30,7 +30,7 @@ html{
   overflow:hidden;
 }
 body{
-  background:linear-gradient(10deg, rgb(139, 185, 255),rgb(255, 107, 188));
+  /* background:linear-gradient(10deg, rgb(139, 185, 255),rgb(255, 107, 188)); */
   background:#340099;
   background-size: cover;
   margin: 0px;
@@ -58,7 +58,7 @@ li{
 
 @media screen and (max-device-width: 1024px){
   body{
-    background: linear-gradient(10deg,rgb(139, 185, 255), rgb(225, 107, 255));
+    background:#340099;
   }
   #app{
     background-position: -200px 200px;

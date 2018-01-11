@@ -10,12 +10,12 @@
           <span>Software Engineer</span>
           <span>UI/UX </span>
         </div>
+        <button class="header-button" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
         <img class="profile-logo" src="../assets/Avatar.svg"> 
         <h2 class="quote">
           "I have a passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
         </h2>
-        <button class="header-button" @click="scrollMeTo('contact')">Contact</button>
         <!-- <button class="header-button-empty">Resume</button> -->
       </div>
       <div class="spacer"></div>
@@ -23,6 +23,13 @@
       <projects/>
       <div class="spacer"></div>
       <section ref="contact" id="contact" class="contact">
+        <div class="spacer"></div>
+        <h2 class="genre-quote">
+          "Thanks for stopping by. Developing ones personal style, image, brand, is a lifelong and often grueling process. I am honored that you found your way to mine and I hope you enjoyed your stay." 
+          <p>
+          Please, reach out. Lets do great things together.
+          </p>
+        </h2>
         <div class="spacer"></div>
 
         <div class="socials">
@@ -40,7 +47,7 @@
           </a>
         </div>
         <div class="spacer"></div>
-        <h3 class="copywrite">created with ❤️ by Andrew Mundy</h3>
+        <h3 class="copywrite">created with 🍹 by Andrew Mundy</h3>
         <a href="https://github.com/andrewmundy/andrewmundy2">
           <h3 class="repo">
             <img src="../assets/icons/github.svg">
@@ -49,7 +56,7 @@
         </a>
       </section>
     <img class="alt-bg" src="../assets/background1:2.svg">
-    <!-- <img class="alt-bg1" src="../assets/first ball.svg">   -->
+    <img class="alt-bg1" src="../assets/first ball.svg">  
     </div>
 </template>
 
@@ -80,9 +87,12 @@
     z-index: 0;
   }
   .alt-bg1{
-    top:0;
-    position:sticky;
-    z-index: 1;
+    left: 400px;
+    top:0px;
+    position: fixed;
+    width: 300px;
+    z-index: -1;
+    opacity: 0.1;
   }
   .schedule-div{
     margin: 2rem 0;
@@ -190,6 +200,9 @@
     
   }
 @media screen and (max-device-width: 1024px){
+  .spacer{
+    height: 3rem;
+  }
   .schedule{
     position: relative;
     font-size: 1rem;
@@ -204,7 +217,7 @@
   .name{
     font-size:3.5rem;
     text-align: center;
-    padding:0px;
+    padding: 10px;
   }
   .title{
     flex-wrap: wrap;

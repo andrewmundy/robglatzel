@@ -1,6 +1,9 @@
 <template>
 <div class="section">
     <h1 class="genre-titles">Development</h1>
+    <h2 class="genre-quote">
+        "With experience and accessibility at the forefront of my development initiatives, I strive to build products for all the world’s users and all of their devices."
+    </h2>
     <div class="projects">
         <div class="project">
             <a target="_blank" href="http://www.batchplz.com/">
@@ -83,6 +86,9 @@
     <!-- <div class="spacer"></div> -->
 
     <h1 class="genre-titles">Design</h1>
+    <h2 class="genre-quote">
+        "Design has always been at the forefront of my being. While tools and styles evolve over time, my basic principals have always remained." <p><i>Inviting, functional, personal, fun.</i></p>
+    </h2>
     <div class="projects">
         <div class="project">
             <a target="_blank" href="https://www.behance.net/gallery/56262049/Chlorophylled-with-indifference">
@@ -260,6 +266,17 @@ export default {
         color:white;
         padding: 1rem 0 0 5rem;
     }
+    .genre-quote{
+        padding: 2rem;
+        color:white;
+        /* font-family: Avenir, Helvetica-Neue; */
+        font-weight: 500;
+        font-style: normal;
+        font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+        font-size: 32px;
+        width: 50vw;
+        margin: auto;
+    }    
     .itsalive{
         /* background:black; */
     }
@@ -274,6 +291,14 @@ export default {
         filter:opacity(1);
         
     }
+    .genre-titles{
+        padding:1rem;
+    }
+    .genre-quote{
+        padding:0;
+        font-size: 22px;
+        width: 90vw;    
+    }
     .projects{
         flex-wrap: wrap;
         padding:0px;
@@ -283,9 +308,9 @@ export default {
         font-size: 2rem;
     }
     .text{
-        font-size:0.1rem;
-        width: 100%;
-        padding:0;
+        font-size: 0.1rem;
+        width: 90%;
+        padding: 0 0.5rem;
     }
     .text h1, .text h2{
         font-size: 1rem;
