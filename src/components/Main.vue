@@ -30,6 +30,12 @@
           Please, reach out. Lets do great things together.
           </p>
         </h2>
+        
+        <div class="schedule-div">
+          <a class="schedule" href="" onclick="Calendly.showPopupWidget('https://calendly.com/andrewmundy/60min');return false;">
+            Lets Chat 📞 or Grab a Coffee ☕️
+          </a>
+        </div>
         <div class="spacer"></div>
 
         <div class="socials">
@@ -41,12 +47,7 @@
           <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img src="../assets/icons/linkedin.svg"></a>
         </div>
 
-        <div class="schedule-div">
-          <a class="schedule" href="" onclick="Calendly.showPopupWidget('https://calendly.com/andrewmundy/60min');return false;">
-            Lets Chat 📞 or Grab a Coffee ☕️
-          </a>
-        </div>
-        <div class="spacer"></div>
+        <!-- <div class="spacer"></div> -->
         <h3 class="copywrite">created with 🍹 by Andrew Mundy</h3>
         <a href="https://github.com/andrewmundy/andrewmundy2">
           <h3 class="repo">
