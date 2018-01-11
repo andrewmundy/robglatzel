@@ -10,36 +10,68 @@
           <span>Software Engineer</span>
           <span>UI/UX </span>
         </div>
-        <img class="logo" src="../assets/Avatar.svg"> 
+        <div class="spacer"></div>
+        <img class="profile-logo" src="../assets/Avatar.svg"> 
         <h2 class="quote">
           "I have a passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
         </h2>
-        <button class="header-button">Contact</button>
-        <button class="header-button-empty">Resume</button>
+        <button class="header-button" @click="scrollMeTo('contact')">Contact</button>
+        <!-- <button class="header-button-empty">Resume</button> -->
       </div>
+      <div class="spacer"></div>
+      <img class="squiggle" src="../assets/squiggle.svg">
       <projects/>
-      <div class="socials">
-        <a href="https://github.com/andrewmundy" alt="github"><img src="../assets/icons/github.svg"></a>
-        <a href="https://codepen.io/andrewmundy/" alt="codepen"><img src="../assets/icons/codepen.svg"></a>
-        <a href="https://www.behance.net/andrewmundy" alt="behance"><img src="../assets/icons/behance.svg"></a>
-        <a href="https://dribbble.com/andrewmundy" alt="dribble"><img src="../assets/icons/dribbble.svg"></a>
-        <a href="https://twitter.com/andrewmundy" alt="twitter"><img src="../assets/icons/twitter.svg"></a>
-        <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img src="../assets/icons/linkedin.svg"></a>
-      </div>
-      <div class="contact">
-        <!-- <form>
-          <li><input placeholder="name"></li>
-          <li><input placeholder="email"></li>
-          <li><textarea placeholder="message"></textarea></li>
-          <button>Send</button>
-        </form> -->
-      </div>
+      <div class="spacer"></div>
+      <section ref="contact" id="contact" class="contact">
+        <div class="spacer"></div>
+
+        <div class="socials">
+          <a href="https://github.com/andrewmundy" alt="github"><img src="../assets/icons/github.svg"></a>
+          <a href="https://codepen.io/andrewmundy/" alt="codepen"><img src="../assets/icons/codepen.svg"></a>
+          <a href="https://www.behance.net/andrewmundy" alt="behance"><img src="../assets/icons/behance.svg"></a>
+          <a href="https://dribbble.com/andrewmundy" alt="dribble"><img src="../assets/icons/dribbble.svg"></a>
+          <a href="https://twitter.com/andrewmundy" alt="twitter"><img src="../assets/icons/twitter.svg"></a>
+          <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img src="../assets/icons/linkedin.svg"></a>
+        </div>
+
+        <div class="schedule-div">
+          <a class="schedule" href="" onclick="Calendly.showPopupWidget('https://calendly.com/andrewmundy/60min');return false;">
+            Lets Chat 📞 or Grab a Coffee ☕️
+          </a>
+        </div>
+        <div class="spacer"></div>
+        <h3 class="copywrite">created with ❤️ by Andrew Mundy</h3>
+        <a href="https://github.com/andrewmundy/andrewmundy2">
+          <h3 class="repo">
+            <img src="../assets/icons/github.svg">
+            VueJS & Webpack
+          </h3>
+        </a>
+      </section>
     <img class="alt-bg" src="../assets/background1:2.svg">
     <!-- <img class="alt-bg1" src="../assets/first ball.svg">   -->
     </div>
 </template>
 
 <style>
+  .copywrite{
+    color:white;
+  }
+  .repo{
+    opacity: 0.5;
+  }
+  .repo img{
+    max-width: 20px;
+  }
+  .schedule{
+    border:solid 5px white;
+    padding:1rem;
+    border-radius: 3rem;
+    color:white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    box-shadow: 0px 70px 60px #00000080;
+  }
   .alt-bg{
     left: 0;
     top:0px;
@@ -51,6 +83,12 @@
     top:0;
     position:sticky;
     z-index: 1;
+  }
+  .schedule-div{
+    margin: 2rem 0;
+  }
+  .spacer{
+    height: 5rem;
   }
   .header-button{
     background: rgb(0, 255, 183);
@@ -85,6 +123,13 @@
   .logo{
     width: 10rem;
   }
+  .squiggle{
+    width: 300px;
+    padding:3rem;
+  }
+  .profile-logo{
+    width: 16rem;
+  }
   .title{
     display: flex;
     justify-content: center;
@@ -107,11 +152,14 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: flex-start;
     background:rgb(24, 24, 24);
-    padding: 1rem;
+    margin: 0px;
+    /* padding:0px; */
+    padding: 1rem 0;
+    /* height: 50vh; */
   }
   .contact li{
     padding:1rem;
@@ -142,6 +190,13 @@
     
   }
 @media screen and (max-device-width: 1024px){
+  .schedule{
+    position: relative;
+    font-size: 1rem;
+    padding:0.5rem;
+    border:solid 3px white;
+    bottom: 0;
+  }
   .headline{
     font-size: 2.5rem;  
     padding: 3rem 0.5rem;
@@ -179,12 +234,19 @@
 </style>
 
 <script>
-// document.addEventListener('touchstart', onTouchStart, {passive: true});
 export default {
   name: 'Main',
   data () {
     return {
-      msg: 'Main Page.'
+      msg: 'Main Page'
+    }
+  },
+  methods: {
+    scrollMeTo (refName) {
+      var element = this.$refs[refName]
+      var top = element.offsetTop
+
+      window.scrollTo(0, top)
     }
   }
 }

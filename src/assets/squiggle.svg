@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1586px" height="146px" viewBox="0 0 1586 146" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>squiggle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+    </defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <path d="M15,15 C112.201,15 112.201,131 209.401,131 C306.601,131 306.601,15 403.802,15 C501,15 501,131 598.199,131 C695.398,131 695.398,15 792.598,15 C889.798,15 889.798,131 987,131 C1084.199,131 1084.199,15 1181.399,15 C1278.604,15 1278.604,131 1375.808,131 C1473.013,131 1473.013,15 1570.217,15" id="squiggle" stroke="#ffffff" stroke-width="30"></path>
+    </g>
+</svg>

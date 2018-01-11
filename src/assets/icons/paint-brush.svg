@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>paint-brush</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tech" transform="translate(-7035.000000, -66.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="paint-brush" transform="translate(7035.000000, 66.000000)">
+                <path d="M269.9,364.6 C271.3,371 272,377.6 272,384.3 C272,465.5 217.8,512 137.2,512 C41.5,512 0,435.1 0,347.6 C10.4,354.7 46.9,384.1 58.7,384.1 C65.7,384.1 71.7,380.1 74.2,373.5 C97.8,311.3 140.7,297 187.1,296.1 C202.7,329.9 233.2,355.7 269.9,364.6 L269.9,364.6 Z M460.6,0 C446.2,0 432.7,6.4 422.4,15.7 C228.2,190 208,194.1 208,245.4 C208,294.2 248.5,336 298.2,336 C357.2,336 391.4,292.6 498.8,91.2 C505.8,77.5 512,62.7 512,47.3 C512,19.7 487.3,0 460.6,0 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

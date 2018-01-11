@@ -3,7 +3,7 @@
     <h1 class="genre-titles">Development</h1>
     <div class="projects">
         <div class="project">
-            <a href="http://www.batchplz.com/">
+            <a target="_blank" href="http://www.batchplz.com/">
             <img src="../assets/projects/batch.png">
             <div class="text">
                 <h1>BatchPlz</h1>
@@ -19,7 +19,7 @@
             </a>
         </div>
         <div class="project">
-            <a href="https://ceelow.herokuapp.com/">
+            <a target="_blank" href="https://ceelow.herokuapp.com/">
             <img src="../assets/projects/ceelo.png">
             <div class="text">
                 <h1>Cee-Lo</h1>
@@ -35,7 +35,7 @@
             </a>
         </div>
         <div class="project itsalive">
-            <a href="https://codepen.io/andrewmundy/full/LzzKoX/">
+            <a target="_blank" href="https://codepen.io/andrewmundy/full/LzzKoX/">
             <img src="../assets/projects/itsalive.svg">
             <div class="text">
                 <h1>Its Alive!</h1>
@@ -48,7 +48,7 @@
             </a>
         </div>
         <div class="project">
-            <a href="http://www.pokequotes.com/">
+            <a target="_blank" href="http://www.pokequotes.com/">
             <img src="../assets/projects/pokequotes.png">
             <div class="text">
                 <h1>PokeQuotes</h1>
@@ -62,90 +62,98 @@
             </a>
         </div>
         <div class="project">
-            <a href="https://github.com/andrewmundy/jackhandeyapi">
+            <a target="_blank" href="https://github.com/andrewmundy/jackhandeyapi">
             <img src="../assets/projects/jackhandey.png">
             <div class="text">
                 <h1>Jack Handey API</h1>
                 <h2>138 Legendary Quotes</h2>
                 <div class="badges">
                     <img src="../assets/icons/mongodb.svg">
-                    <img src="../assets/icons/node.svg">
+                    <img src="../assets/icons/node-js.svg">
                 </div>
             </div>
             </a>
         </div>
     </div>
 
+    <div class="spacer"></div>
+
+    <img class="squiggle" src="../assets/squiggle.svg">
+
+    <!-- <div class="spacer"></div> -->
+
     <h1 class="genre-titles">Design</h1>
     <div class="projects">
         <div class="project">
-            <a href="https://www.behance.net/gallery/56262049/Chlorophylled-with-indifference">
+            <a target="_blank" href="https://www.behance.net/gallery/56262049/Chlorophylled-with-indifference">
             <img src="../assets/projects/chloriphilled.png">
             <div class="text">
                 <h1>Chloriphilled With Indifference</h1>
                 <h2>They're Making Me Awkward</h2>
                 <div class="badges">
-                    <img alt="sketch" src="../assets/icons/sketch.png">
+                    <img alt="sketch" src="../assets/icons/gem.svg">
                 </div>
             </div>
             </a>
         </div>
         <div class="project">
-            <a href="https://www.behance.net/gallery/54140457/Andrewm-Undy">
+            <a target="_blank" href="https://www.behance.net/gallery/54140457/Andrewm-Undy">
             <img src="../assets/projects/amlogo.png">
             <div class="text">
                 <h1>Mr. Mund</h1>
                 <h2>My Special Enthused Mascot</h2>
                 <div class="badges">
-                    <img alt="sketch" src="../assets/icons/sketch.png">
+                    <img alt="sketch" src="../assets/icons/gem.svg">
                 </div>
             </div>
             </a>
         </div>
         <div class="project">
-            <a href="https://www.behance.net/gallery/53306869/Paintings-Traditional-Art-Styles">
+            <a target="_blank" href="https://www.behance.net/gallery/53306869/Paintings-Traditional-Art-Styles">
             <img src="../assets/projects/chall.png">
             <div class="text">
                 <h1>Chillen</h1>
                 <h2>Relax a Bit</h2>
                 <div class="badges">
-                    <img alt="sketch" src="../assets/icons/sketch.png">
+                    <img alt="sketch" src="../assets/icons/pen-alt.svg">
+                    <img alt="sketch" src="../assets/icons/paint-brush.svg">
                 </div>
             </div>
             </a>
         </div>
         <div class="project">
-            <a href="https://www.behance.net/gallery/43147761/Nopal-en-Movimiento">
+            <a target="_blank" href="https://www.behance.net/gallery/43147761/Nopal-en-Movimiento">
             <img src="../assets/projects/nopa.gif">
             <div class="text">
                 <h1>Nopal en Movimiento</h1>
                 <h2>Plants in Motion</h2>
                 <div class="badges">
-                    <img alt="sketch" src="../assets/icons/sketch.png">
+                    <img alt="sketch" src="../assets/icons/ai.svg">
                 </div>
             </div>
             </a>
         </div>
         <div class="project">
-            <a href="https://www.behance.net/gallery/53304567/Various-Gif-Assets">
+            <a target="_blank" href="https://www.behance.net/gallery/53304567/Various-Gif-Assets">
             <img src="../assets/projects/guy.gif">
             <div class="text">
                 <h1>Guy</h1>
                 <h2>Glasses on the Front or Back?</h2>
                 <div class="badges">
-                    <img alt="sketch" src="../assets/icons/sketch.png">
+                    <img alt="sketch" src="../assets/icons/ai.svg">
                 </div>
             </div>
             </a>
         </div>
         <div class="project">
-            <a href="https://www.behance.net/gallery/53306869/Paintings-Traditional-Art-Styles">
+            <a target="_blank" href="https://www.behance.net/gallery/53306869/Paintings-Traditional-Art-Styles">
             <img src="../assets/projects/lysergic.png">
             <div class="text">
                 <h1>Lysergic</h1>
                 <h2>Your Mind is your 6th Sense</h2>
                 <div class="badges">
-                    <img alt="sketch" src="../assets/icons/sketch.png">
+                    <img alt="sketch" src="../assets/icons/pen-alt.svg">
+                    <img alt="sketch" src="../assets/icons/paint-brush.svg">
                 </div>
             </div>
             </a>
@@ -250,7 +258,7 @@ export default {
         text-align: left;
         font-size: 2rem;
         color:white;
-        padding: 1rem 0 0 1rem;
+        padding: 1rem 0 0 5rem;
     }
     .itsalive{
         /* background:black; */

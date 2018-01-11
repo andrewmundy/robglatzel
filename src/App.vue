@@ -13,7 +13,10 @@ export default {
 
 <style>
 html{
-  background:rgb(24, 24, 24);
+  /* z-index: 1; */
+  /* background:rgb(24, 24, 24); */
+  /* overflow: hidden; */
+  /* height: 100%; */
 }
 #app {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -28,6 +31,7 @@ html{
 }
 body{
   background:linear-gradient(10deg, rgb(139, 185, 255),rgb(255, 107, 188));
+  background:#340099;
   background-size: cover;
   margin: 0px;
   padding: 0px;

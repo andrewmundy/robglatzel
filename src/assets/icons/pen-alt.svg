@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>pen-alt</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tech" transform="translate(-7638.000000, -66.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="pen-alt" transform="translate(7638.000000, 66.000000)">
+                <path d="M497.9,142.1 L451.8,188.2 C447.1,192.9 439.5,192.9 434.8,188.2 L323.8,77.2 C319.1,72.5 319.1,64.9 323.8,60.2 L369.9,14.1 C388.6,-4.6 419,-4.6 437.8,14.1 L497.9,74.2 C516.7,92.9 516.7,123.3 497.9,142.1 Z M412.2,210.8 L251,49.7 C241.6,40.3 226.4,40.3 217.1,49.7 L77.8,189 C68.4,198.4 68.4,213.6 77.8,222.9 L89.1,234.2 C98.5,243.6 113.7,243.6 123,234.2 L234,123.2 L247.4,136.6 L12.8,371.2 L0.2,485.3 C-1.5,500.6 11.4,513.5 26.7,511.8 L140.9,499.1 L412.3,227.7 C416.9,223.1 416.9,215.5 412.2,210.8 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

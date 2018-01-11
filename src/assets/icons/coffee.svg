@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640px" height="448px" viewBox="0 0 640 448" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>coffee</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tech" transform="translate(-9013.000000, -66.000000)" fill-rule="nonzero" fill="#000000">
+            <g id="coffee" transform="translate(9012.000000, 66.000000)">
+                <path d="M193,352 L385,352 C438,352 481,309 481,256 L513,256 C583.6,256 641,198.6 641,128 C641,57.4 583.6,0 513,0 L121,0 C107.7,0 97,10.7 97,24 L97,256 C97,309 140,352 193,352 Z M513,64 C548.3,64 577,92.7 577,128 C577,163.3 548.3,192 513,192 L481,192 L481,64 L513,64 Z M560.7,448 L49.3,448 C1.7,448 -11.7,384 13.3,384 L596.6,384 C621.6,384 608.4,448 560.7,448 L560.7,448 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
