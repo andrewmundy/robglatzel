@@ -215,6 +215,9 @@
     font-size: 2.5rem;  
     padding: 3rem 0.5rem;
   }
+  .headline span{
+    padding:0;
+  }
   .name{
     font-size:3.5rem;
     text-align: center;
