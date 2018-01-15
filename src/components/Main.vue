@@ -2,14 +2,14 @@
     <div class="">
 
       <div class="header">
-        <div class="title">
+        <div class="title hidden hidden-left" v-infocus="'showElement'">
           <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
           <span class="name">ANDREW<br> MUNDY</span>
         </div>
-        <div class="headline hidden hidden-left" v-infocus="'showElement'"> 
-          <span>Product Designer</span>
-          <span>Software Engineer</span>
-          <span>UI/UX </span>
+        <div class="headline"> 
+          <span class="hidden hidden-left-fast" v-infocus="'showElement'">Product Designer</span>
+          <span class="hidden hidden-right" v-infocus="'showElement'">Software Engineer</span>
+          <span class="hidden hidden-left" v-infocus="'showElement'">UI/UX </span>
         </div>
         <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
@@ -235,6 +235,9 @@
   .hidden-right {
     transform: translate(50px, 0);
   }
+  .hidden-right-fast {
+    transform: translate(30px, 0);
+  }
   .hidden-up {
     transform: translate(0, 50px);
   }
@@ -243,6 +246,9 @@
   }
   .hidden-left {
     transform: translate(-50px, 0);
+  }
+  .hidden-left-fast {
+    transform: translate(-30px, 0);
   }
 
   .showElement {
@@ -332,7 +338,7 @@ export default {
             rect.width > 0 &&
             rect.height > 0 &&
             rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            rect.bottom <= (window.innerHeight + 100 || document.documentElement.clientHeight)
           )
           if (inView) {
             el.classList.add(binding.value)
