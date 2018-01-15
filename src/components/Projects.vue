@@ -5,22 +5,6 @@
         "With experience and accessibility at the forefront of my development initiatives, I strive to build products for all the world’s users and all of their devices."
     </h2>
     <div class="projects">
-        <!-- <div class="project-am">
-            <a target="_blank" href="/">
-            <img class="project-img" src="../assets/AM_logo.svg">
-            <div class="empty"></div>
-            <div class="text">
-                <h1>AM Portfolio 2.0</h1>
-                <h2>This Website</h2>
-                <div class="badges">
-                    <img src="../assets/icons/vuejs.svg">
-                    <img src="../assets/icons/html5.svg">
-                    <img src="../assets/icons/sass.svg">
-                    <img src="../assets/icons/cssgrid.svg">
-                </div>
-            </div>
-            </a>
-        </div> -->
         <div class="project hidden hidden-up" v-infocus="'showElement'">
             <a target="_blank" href="http://www.batchplz.com/">
             <img src="../assets/projects/batch.jpg">
@@ -181,7 +165,6 @@
             </a>
         </div>
     </div>
-
 </div>
 </template>
 

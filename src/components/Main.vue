@@ -21,7 +21,7 @@
       
       <div class="spacer"></div>
       
-      <img class="hidden hidden-right squiggle" v-infocus="'showElement-fast'" src="../assets/squiggle.svg">
+      <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
       
       <projects/>
 
@@ -338,7 +338,7 @@ export default {
             rect.width > 0 &&
             rect.height > 0 &&
             rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight + 100 || document.documentElement.clientHeight)
+            rect.bottom <= (window.innerHeight - 50 || document.documentElement.clientHeight)
           )
           if (inView) {
             el.classList.add(binding.value)
