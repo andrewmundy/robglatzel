@@ -1,7 +1,7 @@
 <template>
 <div class="section">
     <h1 class="genre-titles">Development</h1>
-    <h2 class="genre-quote">
+    <h2 class="genre-quote hidden hidden-left" v-infocus="'showElement'">
         "With experience and accessibility at the forefront of my development initiatives, I strive to build products for all the world’s users and all of their devices."
     </h2>
     <div class="projects">
@@ -21,7 +21,7 @@
             </div>
             </a>
         </div> -->
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement'">
             <a target="_blank" href="http://www.batchplz.com/">
             <img src="../assets/projects/batch.jpg">
             <div class="text">
@@ -37,7 +37,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
             <a target="_blank" href="https://ceelow.herokuapp.com/">
             <img src="../assets/projects/ceelo.jpg">
             <div class="text">
@@ -53,7 +53,7 @@
             </div>
             </a>
         </div>
-        <div class="project itsalive">
+        <div class="project itsalive hidden hidden-up-fast" v-infocus="'showElement'">
             <a target="_blank" href="https://codepen.io/andrewmundy/full/LzzKoX/">
             <img src="../assets/projects/itsalive.svg">
             <div class="text">
@@ -66,7 +66,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
             <a target="_blank" href="http://www.pokequotes.com/">
             <img src="../assets/projects/pokequotes.jpg">
             <div class="text">
@@ -80,7 +80,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up-fast" v-infocus="'showElement'">
             <a target="_blank" href="https://github.com/andrewmundy/jackhandeyapi">
             <img src="../assets/projects/jackhandey.jpg">
             <div class="text">
@@ -97,16 +97,16 @@
 
     <div class="spacer"></div>
 
-    <img class="squiggle" src="../assets/squiggle.svg">
+    <img class="hidden hidden-left squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
 
     <!-- <div class="spacer"></div> -->
 
     <h1 class="genre-titles">Design</h1>
-    <h2 class="genre-quote">
+    <h2 class="genre-quote hidden hidden-right" v-infocus="'showElement'">
         "Design has always been at the forefront of my being. While tools and styles evolve over time, my basic principals have always remained." <p><i>Inviting, functional, personal, fun.</i></p>
     </h2>
     <div class="projects">
-        <div class="project">
+        <div class="project hidden hidden-up-fast" v-infocus="'showElement'">
             <a target="_blank" href="https://www.behance.net/gallery/56262049/Chlorophylled-with-indifference">
             <img src="../assets/projects/chloriphilled.jpg">
             <div class="text">
@@ -118,7 +118,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
             <a target="_blank" href="https://www.behance.net/gallery/54140457/Andrewm-Undy">
             <img src="../assets/projects/amlogo.jpg">
             <div class="text">
@@ -130,7 +130,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement'">
             <a target="_blank" href="https://www.behance.net/gallery/53306869/Paintings-Traditional-Art-Styles">
             <img src="../assets/projects/slowventures.png">
             <div class="text">
@@ -143,7 +143,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up-fast" v-infocus="'showElement'">
             <a target="_blank" href="https://www.behance.net/gallery/43147761/Nopal-en-Movimiento">
             <img src="../assets/projects/nopa.gif">
             <div class="text">
@@ -155,7 +155,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
             <a target="_blank" href="https://www.behance.net/gallery/53304567/Various-Gif-Assets">
             <img src="../assets/projects/sensify.jpg">
             <div class="text">
@@ -167,7 +167,7 @@
             </div>
             </a>
         </div>
-        <div class="project">
+        <div class="project hidden hidden-up" v-infocus="'showElement'">
             <a target="_blank" href="https://www.behance.net/gallery/53304567/Various-Gif-Assets">
             <img src="../assets/projects/noisepop.jpg">
             <div class="text">
@@ -182,7 +182,6 @@
         </div>
     </div>
 
-    </div>
 </div>
 </template>
 
@@ -191,21 +190,34 @@ export default {
   name: 'Projects',
   data () {
     return {
-      msg: 'hi',
-      icons: {
-        'vue': '../assets/icons/vuejs.svg',
-        'cssgrid': '../assets/icons/cssgrid.svg',
-        'firebase': '../assets/icons/firebase.svg',
-        'html5': '../assets/icons/html5.svg',
-        'mongodb': '../assets/icons/mongodb.svg',
-        'node': '../assets/icons/node.svg',
-        'react': '../assets/icons/react.svg',
-        'sass': '../assets/icons/sass.svg'
+      msg: 'hi'
+    }
+  },
+  directives: {
+    infocus: {
+      isLiteral: true,
+      inserted: (el, binding, vnode) => {
+        let f = () => {
+          let rect = el.getBoundingClientRect()
+          let inView = (
+            rect.width > 0 &&
+            rect.height > 0 &&
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight + 350 || document.documentElement.clientHeight)
+          )
+          if (inView) {
+            el.classList.add(binding.value)
+            window.removeEventListener('scroll', f)
+          }
+        }
+        window.addEventListener('scroll', f)
+        f()
       }
     }
   }
 }
 </script>
+
 <style lang="scss">
     .badges{
         display: flex;

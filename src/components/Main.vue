@@ -1,11 +1,12 @@
 <template>
     <div class="">
+
       <div class="header">
         <div class="title">
           <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
           <span class="name">ANDREW<br> MUNDY</span>
         </div>
-        <div class="headline"> 
+        <div class="headline hidden hidden-left" v-infocus="'showElement'"> 
           <span>Product Designer</span>
           <span>Software Engineer</span>
           <span>UI/UX </span>
@@ -13,13 +14,15 @@
         <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
         <img class="profile-logo" src="../assets/Avatar.svg"> 
-        <h2 class="quote">
+        <h2 class="hidden hidden-up quote" v-infocus="'showElement-slow'">
           "I have a passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
         </h2>
-        <!-- <button class="header-button-empty">Resume</button> -->
       </div>
+      
       <div class="spacer"></div>
-      <img class="squiggle" src="../assets/squiggle.svg">
+      
+      <img class="hidden hidden-right squiggle" v-infocus="'showElement-fast'" src="../assets/squiggle.svg">
+      
       <projects/>
 
       <div class="spacer"></div>
@@ -29,7 +32,8 @@
         <!-- <div class="spacer"></div> -->
         
         <div class="spacer"></div>
-        <h2 class="genre-quote">
+
+        <h2 class="hidden hidden-up quote" v-infocus="'showElement'">
           "Thanks for stopping by. Developing ones personal style, image, brand, is a lifelong and often grueling process. I am honored that you found your way to mine and I hope you enjoyed your stay." 
           <p>
           Please, reach out. Lets do great things.
@@ -49,12 +53,12 @@
 
         <!-- <div class="spacer"></div> -->
         <div class="socials">
-          <a href="https://github.com/andrewmundy" alt="github"><img src="../assets/icons/github.svg"></a>
-          <a href="https://codepen.io/andrewmundy/" alt="codepen"><img src="../assets/icons/codepen.svg"></a>
-          <a href="https://www.behance.net/andrewmundy" alt="behance"><img src="../assets/icons/behance.svg"></a>
-          <a href="https://dribbble.com/andrewmundy" alt="dribble"><img src="../assets/icons/dribbble.svg"></a>
-          <a href="https://twitter.com/andrewmundy" alt="twitter"><img src="../assets/icons/twitter.svg"></a>
-          <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img src="../assets/icons/linkedin.svg"></a>
+          <a href="https://github.com/andrewmundy" alt="github"><img class="hidden hidden-up" v-infocus="'showElement-fast'" src="../assets/icons/github.svg"></a>
+          <a href="https://codepen.io/andrewmundy/" alt="codepen"><img class="hidden hidden-up-fast" v-infocus="'showElement'" src="../assets/icons/codepen.svg"></a>
+          <a href="https://www.behance.net/andrewmundy" alt="behance"><img class="hidden hidden-up" v-infocus="'showElement'" src="../assets/icons/behance.svg"></a>
+          <a href="https://dribbble.com/andrewmundy" alt="dribble"><img class="hidden hidden-up-fast" v-infocus="'showElement'" src="../assets/icons/dribbble.svg"></a>
+          <a href="https://twitter.com/andrewmundy" alt="twitter"><img class="hidden hidden-up" v-infocus="'showElement-fast'" src="../assets/icons/twitter.svg"></a>
+          <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img class="hidden hidden-up" v-infocus="'showElement'" src="../assets/icons/linkedin.svg"></a>
         </div>
 
         <h5 class="copywrite">created with 🍹 by Andrew Mundy</h5>
@@ -224,6 +228,38 @@
       max-width: 70px;
     }
   }
+  .hidden {
+    opacity: 0;
+  }
+
+  .hidden-right {
+    transform: translate(50px, 0);
+  }
+  .hidden-up {
+    transform: translate(0, 50px);
+  }
+  .hidden-up-fast {
+    transform: translate(0, 30px);
+  }
+  .hidden-left {
+    transform: translate(-50px, 0);
+  }
+
+  .showElement {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.5s ease-out;
+  }
+  .showElement-fast {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 1s ease-out;
+  }
+  .showElement-slow {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 1.3s ease-out;
+  }
 
   @media screen and (max-device-width: 1024px) {
     .spacer {
@@ -283,8 +319,29 @@ export default {
     scrollMeTo (refName) {
       var element = this.$refs[refName]
       var top = element.offsetTop
-
       window.scrollTo(0, top)
+    }
+  },
+  directives: {
+    infocus: {
+      isLiteral: true,
+      inserted: (el, binding, vnode) => {
+        let f = () => {
+          let rect = el.getBoundingClientRect()
+          let inView = (
+            rect.width > 0 &&
+            rect.height > 0 &&
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+          )
+          if (inView) {
+            el.classList.add(binding.value)
+            window.removeEventListener('scroll', f)
+          }
+        }
+        window.addEventListener('scroll', f)
+        f()
+      }
     }
   }
 }

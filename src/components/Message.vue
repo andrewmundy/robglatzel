@@ -23,7 +23,6 @@
   }
 </script>
 
-
 <style lang="scss">
     .form{
         form {
