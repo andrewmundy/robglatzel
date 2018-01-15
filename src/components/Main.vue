@@ -10,7 +10,7 @@
           <span>Software Engineer</span>
           <span>UI/UX </span>
         </div>
-        <button class="header-button" @click="scrollMeTo('contact')">Contact</button>
+        <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
         <img class="profile-logo" src="../assets/Avatar.svg"> 
         <h2 class="quote">
@@ -21,23 +21,33 @@
       <div class="spacer"></div>
       <img class="squiggle" src="../assets/squiggle.svg">
       <projects/>
+
       <div class="spacer"></div>
+
       <section ref="contact" id="contact" class="contact">
+
+        <!-- <div class="spacer"></div> -->
+        
         <div class="spacer"></div>
         <h2 class="genre-quote">
           "Thanks for stopping by. Developing ones personal style, image, brand, is a lifelong and often grueling process. I am honored that you found your way to mine and I hope you enjoyed your stay." 
           <p>
-          Please, reach out. Lets do great things together.
+          Please, reach out. Lets do great things.
           </p>
         </h2>
-        
         <div class="schedule-div">
           <a class="schedule" href="" onclick="Calendly.showPopupWidget('https://calendly.com/andrewmundy/60min');return false;">
-            Lets Chat 📞 or Grab a Coffee ☕️
+            Take a Look at my Schedule
           </a>
+          <p>
+            <h1 class="hvr-bob">
+              👆
+            </h1>
+          </p>
         </div>
-        <div class="spacer"></div>
+        <message/>
 
+        <!-- <div class="spacer"></div> -->
         <div class="socials">
           <a href="https://github.com/andrewmundy" alt="github"><img src="../assets/icons/github.svg"></a>
           <a href="https://codepen.io/andrewmundy/" alt="codepen"><img src="../assets/icons/codepen.svg"></a>
@@ -47,13 +57,12 @@
           <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img src="../assets/icons/linkedin.svg"></a>
         </div>
 
-        <!-- <div class="spacer"></div> -->
-        <h3 class="copywrite">created with 🍹 by Andrew Mundy</h3>
+        <h5 class="copywrite">created with 🍹 by Andrew Mundy</h5>
         <a href="https://github.com/andrewmundy/andrewmundy2">
-          <h3 class="repo">
+          <h5 class="repo">
             <img src="../assets/icons/github.svg">
             VueJS & Webpack
-          </h3>
+          </h5>
         </a>
       </section>
     <img class="alt-bg" src="../assets/background1:2.svg">
@@ -61,68 +70,79 @@
     </div>
 </template>
 
-<style>
-  .copywrite{
-    color:white;
+<style lang="scss">
+  $background-color:black;
+  
+  .copywrite {
+    color: white;
   }
-  .repo{
+
+  .repo {
     opacity: 0.5;
+    img {
+      max-width: 12px;
+    }
   }
-  .repo img{
-    max-width: 20px;
-  }
-  .schedule{
-    border:solid 5px white;
-    padding:1rem;
+
+  .schedule {
+    border: 5px solid #00ffb7;
+    background: #00f3ae;
+    padding: 1rem;
     border-radius: 3rem;
-    color:white;
+    color: white;
     font-size: 1.5rem;
     font-weight: 800;
-    box-shadow: 0px 70px 60px #00000080;
   }
-  .alt-bg{
+
+  .alt-bg {
     left: 0;
-    top:0px;
+    top: 0px;
     width: 100vw;
     position: fixed;
     z-index: 0;
   }
-  .alt-bg1{
+
+  .alt-bg1 {
     left: 400px;
-    top:0px;
+    top: 0px;
     position: fixed;
     width: 300px;
     z-index: -1;
     opacity: 0.1;
   }
-  .schedule-div{
+
+  .schedule-div {
     margin: 2rem 0;
   }
-  .spacer{
+
+  .spacer {
     height: 5rem;
   }
-  .header-button{
+
+  .header-button {
     background: rgb(0, 255, 183);
     border-radius: 100px;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
     font-weight: 600;
     padding: 0.3rem 1rem 0.5rem 1rem;
     font-size: 1.5rem;
   }
-  .header-button-empty{
+
+  .header-button-empty {
     background: none;
     border-radius: 100px;
     box-shadow: 0 0 0 4px white inset;
-    color:white;
-    border:none;
+    color: white;
+    border: none;
     font-weight: 600;
     padding: 0.3rem 1rem 0.5rem 1rem;
     font-size: 1.5rem;
   }
-  .quote{
+
+  .quote {
     padding: 2rem;
-    color:white;
+    color: white;
     /* font-family: Avenir, Helvetica-Neue; */
     font-weight: 400;
     font-style: normal;
@@ -131,61 +151,66 @@
     width: 60vw;
     margin: auto;
   }
-  .logo{
+
+  .logo {
     width: 10rem;
   }
-  .squiggle{
+
+  .squiggle {
     width: 300px;
-    padding:3rem;
+    padding: 3rem;
   }
-  .profile-logo{
+
+  .profile-logo {
     width: 16rem;
   }
-  .title{
+
+  .title {
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
-  .header{
+
+  .header {
     position: relative;
     z-index: 2;
-    padding:2rem 0rem;
-    margin:0px;
+    padding: 2rem 0rem;
+    margin: 0px;
     text-align: center;
   }
-  .headline{
-    color:white;
+
+  .headline {
+    color: white;
     font-size: 3rem;
     padding: 2rem;
     font-weight: 100;
   }
-  .contact{
+
+  .contact {
     position: relative;
     z-index: 2;
     width: 100%;
-    /* display: flex; */
-    justify-content: center;
-    align-items: flex-start;
-    background:rgb(24, 24, 24);
+    background: rgb(24, 24, 24);
     margin: 0px;
-    /* padding:0px; */
     padding: 1rem 0;
-    /* height: 50vh; */
+    li {
+      padding: 1rem;
+    }
   }
-  .contact li{
-    padding:1rem;
+
+  .headline span {
+    padding: 1rem;
   }
-  .headline span{
-    padding:1rem;
-  }
-  .name{
+
+  .name {
     color: white;
     font-weight: 900;
     font-size: 4rem;
     text-align: left;
     padding-left: 2rem;
   }
-  .socials{
+
+  .socials {
     position: relative;
     z-index: 2;
     display: flex;
@@ -195,59 +220,55 @@
     width: 70vw;
     margin: auto;
     padding: 3rem;
+    * {
+      max-width: 70px;
+    }
   }
-  .socials * {
-    max-width: 70px;
-    
-  }
-@media screen and (max-device-width: 1024px){
-  .spacer{
-    height: 3rem;
-  }
-  .schedule{
-    position: relative;
-    font-size: 1rem;
-    padding:0.5rem;
-    border:solid 3px white;
-    bottom: 0;
-  }
-  .headline{
-    font-size: 2.5rem;  
-    padding: 3rem 0.5rem;
-  }
-  .headline span{
-    padding:0;
-  }
-  .name{
-    font-size:3.5rem;
-    text-align: center;
-    padding: 10px;
-  }
-  .title{
-    flex-wrap: wrap;
-  }
-  .header{
-    /* height:50vh; */
-  }
-  .text{
-    width: 100vw;
-  }
-  .quote{
-    padding:1rem;
-    width: auto;    
-  }
-  .socials{
-    padding:1rem;
-    width:90vw;
-  }
-  .socials *{
-    width: 30px;
-  }
-  .alt-bg{
-    width: 1000px;
-  }
-}
 
+  @media screen and (max-device-width: 1024px) {
+    .spacer {
+      height: 3rem;
+    }
+    .schedule {
+      position: relative;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border: solid 3px #00ffb7;
+      bottom: 0;
+    }
+    .headline {
+      font-size: 2.5rem;
+      padding: 3rem 0.5rem;
+      span {
+        padding: 0;
+      }
+    }
+    .name {
+      font-size: 3.5rem;
+      text-align: center;
+      padding: 10px;
+    }
+    .title {
+      flex-wrap: wrap;
+    }
+    .text {
+      width: 100vw;
+    }
+    .quote {
+      padding: 1rem;
+      width: auto;
+    }
+    .socials {
+      padding: 1rem;
+      width: 90vw;
+      * {
+        width: 30px;
+      }
+    }
+    .alt-bg {
+      width: 1000px;
+    }
+  }
 </style>
 
 <script>
