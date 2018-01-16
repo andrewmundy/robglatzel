@@ -2,13 +2,16 @@
 <div>
     <div class="name">
         <div class="header">
-            <h1 class="title hidden hidden-left" v-infocus="'showElement'">Hello {{ this.parseUrl() }}! 👋</h1>
+            <h1 class="title hidden hidden-left" v-infocus="'showElement'">Hello {{ this.parseUrl() }}! <span class="hvr-shake">👋</span></h1>
             <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
             <br>
             <a class="schedule back" href="/"> back </a>
         </div>
     </div>
+    <div class="spacer"></div>
     <contact/>
+    <img class="alt-bg" src="../assets/background1:2.svg">
+    <img class="alt-bg1" src="../assets/first ball.svg">  
 </div>
 </template>
 
