@@ -1,6 +1,5 @@
 <template>
     <div class="">
-
       <div class="header">
         <div class="title hidden hidden-left" v-infocus="'showElement'">
           <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
