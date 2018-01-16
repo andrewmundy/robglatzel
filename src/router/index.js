@@ -15,7 +15,6 @@ Vue.component('message', Message)
 Vue.component('contact', Contact)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
