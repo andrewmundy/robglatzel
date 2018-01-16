@@ -19,11 +19,11 @@
             "At {{ this.parseUrl() }} I look forward to sharing my passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
             </h2>
             <img class="squiggle" src="../assets/squiggle.svg">
-            <div class="schedule" href="http://www.andrewmundy.net">resume</div>
+            <a href="https://drive.google.com/file/d/15ZzNHDTi7PuNY-vqS0GAV_YLAIM6Bu49/view?usp=sharing"><div class="schedule">resume</div></a>
         </div>
     </div>
-    <!-- <img class="alt-bg" src="../assets/background1:2.svg"> -->
-    <!-- <img class="alt-bg1" src="../assets/first ball.svg">   -->
+    <img class="alt-bg" src="../assets/background1:2.svg">
+    <img class="alt-bg1" src="../assets/first ball.svg">  
 </div>
 </template>
 
@@ -32,14 +32,8 @@
     width: 300px;
     margin: auto;
 }
-#app{
-    background: none;
-}
 .profile-logo{
     width: 200px;
-}
-.alt-bg{
-    opacity: 0.7;
 }
 .headline{
     padding:1rem;
