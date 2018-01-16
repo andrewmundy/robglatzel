@@ -56,6 +56,7 @@
 <style lang="scss">
     .name{
         height: 100vh;
+        padding: 1rem;
     }
   .squiggle {
     width: 300px;
