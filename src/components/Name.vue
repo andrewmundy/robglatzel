@@ -1,11 +1,45 @@
 <template>
-    <div>
-        <div class="name">
+<div>
+    <div class="name">
+        <div class="header">
             <h1 class="title hidden hidden-left" v-infocus="'showElement'">Hello {{ this.parseUrl() }}! 👋</h1>
             <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
+            <br>
+            <a class="schedule back" href="/"> back </a>
         </div>
     </div>
+    <contact/>
+</div>
 </template>
+
+<style>
+.back{
+    margin: 2rem;
+}
+.genre-quote {
+    padding: 2rem;
+    color: white;
+    font-weight: 500;
+    font-style: normal;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 32px;
+    width: 50vw;
+    margin: auto;
+}
+ @media screen and (max-device-width: 1024px) {
+    .genre-quote {
+        font-size: 20px;
+        width: 85vw;
+        padding: 0.5rem;
+    }
+    .title{
+        font-size: 5rem;
+    }
+    .squiggle{
+        padding:3rem 0;
+    }
+}    
+</style>
 
 <script>
   export default {
@@ -54,50 +88,5 @@
 </script>
 
 <style lang="scss">
-    .name{
-        height: 100vh;
-        padding: 1rem;
-    }
-  .squiggle {
-    width: 300px;
-    padding: 3rem;
-  }
-  .hidden {
-    opacity: 0;
-  }
 
-  .hidden-right {
-    transform: translate(50px, 0);
-  }
-  .hidden-right-fast {
-    transform: translate(30px, 0);
-  }
-  .hidden-up {
-    transform: translate(0, 50px);
-  }
-  .hidden-up-fast {
-    transform: translate(0, 30px);
-  }
-  .hidden-left {
-    transform: translate(-50px, 0);
-  }
-  .hidden-left-fast {
-    transform: translate(-30px, 0);
-  }
-
-  .showElement {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 0.5s ease-out;
-  }
-  .showElement-fast {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 1s ease-out;
-  }
-  .showElement-slow {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: all 1.3s ease-out;
-  }
 </style>
