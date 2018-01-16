@@ -26,6 +26,10 @@ export default new Router({
       path: '/:name',
       name: 'Name',
       component: Name
+    },
+    {
+      path: '*',
+      component: Main
     }
   ]
 })
