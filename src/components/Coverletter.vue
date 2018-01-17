@@ -11,8 +11,7 @@
                 <span class="" >Software Engineer</span>
                 <span class="" >UI/UX</span>
             </div>
-        </div>
-        <div class="header">
+        <div>
             <img class="profile-logo" src="../assets/Avatar.svg"> 
             <!-- <h2 class="title " >Hi {{ this.parseUrl() }}! <span class="hvr-shake">👋</span></h2> -->
             <h2 class="quote">
@@ -20,6 +19,7 @@
             </h2>
             <img class="squiggle" src="../assets/squiggle.svg">
             <a href="https://drive.google.com/file/d/15ZzNHDTi7PuNY-vqS0GAV_YLAIM6Bu49/view?usp=sharing"><div class="schedule">resume</div></a>
+        </div>
         </div>
     </div>
     <img class="alt-bg" src="../assets/background1:2.svg">
@@ -64,6 +64,9 @@
     margin: auto;
 }
  @media screen and (max-device-width: 1024px) {
+    .coverletter{
+        width: 100%;
+    }
     .genre-quote {
         font-size: 20px;
         width: 85vw;
