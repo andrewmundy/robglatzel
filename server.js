@@ -5,12 +5,12 @@ var history = require('connect-history-api-fallback');
 
 var connect = require('connect');
 
-var app = connect()
-    .use(history())
-    .listen(3000);
+// var app = connect()
+//     .use(history())
+//     .listen(3000);
 
 // app = express();
-// app.use(history());
+app.use(history());
 app.use(serveStatic(__dirname + "/dist"));
 
 var port = process.env.PORT || 8080;
