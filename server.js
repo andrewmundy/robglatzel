@@ -10,7 +10,7 @@ var connect = require('connect');
 //     .listen(3000);
 
 app = express();
-app.use(history());
+// app.use(history());
 app.use(serveStatic(__dirname + "/dist"));
 
 var port = process.env.PORT || 8080;
