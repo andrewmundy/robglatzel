@@ -2,10 +2,11 @@
 <div>
     <div class="coverletter">
         <div class="header">
-            <div class="title cl-title">
+            <a href="/"><div class="title cl-title">
                 <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
                 <span class="name">ANDREW<br> MUNDY</span>
             </div>
+            </a>
             <div class="headline headline-cl"> 
                 <span class="" >Product Designer</span>
                 <span class="" >Software Engineer</span>
