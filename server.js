@@ -9,9 +9,9 @@ var connect = require('connect');
 //     .use(history())
 //     .listen(3000);
 
-// app = express();
+app = express();
 app.use(history());
-app.use(serveStatic(__dirname + "/dist"));
+// app.use(serveStatic(__dirname + "/dist"));
 
 var port = process.env.PORT || 8080;
 app.listen(port);
