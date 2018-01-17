@@ -27,6 +27,12 @@
 
                 <br><br>
                 So in addition to enthusiastically utilizing my design, development, and leadership skills, I git commit -m “look forward to providing my skills as a web designer to further contribute to the fun, upbeat, culture and style of GitHub” 
+                <br></br>
+                Why do I want to work at GitHub? Well, GitHub is the base of the worlds projects, teams, products. I have been honored to have the opportunity to bartend events at the HQ. But with a certain star in my eye knowing I was in the epicenter of todays most innovative technologies. 
+                <br></br>
+                I am already familiar with many individuals at Github and would love the opportunity to work alongside the rest of the team. 
+                <br></br>
+                I look forward to contributing to the next great project. Perhaps official, robust support for Sketch's new file format and the industry standard of version control for designers? Or additional marketplace innovations? 
                 </p>
             </div>
             <img class="squiggle" src="../assets/squiggle.svg">
