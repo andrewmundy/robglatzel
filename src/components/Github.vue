@@ -14,9 +14,17 @@
         <div>
             <img class="profile-logo" src="../assets/Avatar.svg"> 
             <!-- <h2 class="title " >Hi {{ this.parseUrl() }}! <span class="hvr-shake">👋</span></h2> -->
-            <h2 class="quote">
-            "At {{ this.parseUrl() }} I look forward to sharing my passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
-            </h2>
+            <div>
+                <h2 class="quote quote-cl">
+                    "I look forward to applying my skills as a Front-End Engineer and UI/UX designer to do my very best work as a product design intern at Github."
+                </h2>
+                <p class="cover-text">Although I have experience as a developer, designer, and a product designer, I am seeking this internship to accelerate this new career path as I strive to combine and push teams forward in tandem. 
+                    <br>
+                    <br>Also, as a side note- you may remember me from working behind the bar at your offices and great friends with Steve and AJ.
+                    <br>
+                    <br>So in addition to enthusiastically utilizing my design, development, and leadership skills I can also provide my skills as a master mixologizer! 🌴🍹🌴
+                </p>
+            </div>
             <img class="squiggle" src="../assets/squiggle.svg">
             <a href="/"><div class="schedule cl-schedule">portfolio</div></a>
             <a href="https://drive.google.com/file/d/15ZzNHDTi7PuNY-vqS0GAV_YLAIM6Bu49/view?usp=sharing"><div class="schedule cl-schedule">resume</div></a>
@@ -29,6 +37,15 @@
 </template>
 
 <style lang="scss">
+.cover-text{
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 2.2rem;
+    width: 600px;
+    margin: auto;
+    border-radius: 2rem;
+    background: #ffffff;
+}
 .headline-cl *{
     font-size: 30px !important;
     font-weight: 200;
@@ -55,12 +72,9 @@
         font-size:42px;
     }
 }
-.quote{
-    width: auto;
-}
 .coverletter{
-    width: 8.5in;
-    height: 11.5in;
+    width: 80vw;
+    // height: 11.5in;
     margin: auto;
     // overflow: hidden;
 }
@@ -78,6 +92,17 @@
     margin: auto;
 }
  @media screen and (max-device-width: 1024px) {
+    .quote-cl{
+        font-size: 25px;
+    }
+    .cover-text{
+        font-size: 1.2rem;
+        padding: 1.8rem 1.2rem;
+        width: auto;
+        margin: auto;
+        border-radius: 0;
+        background: #ffffff;
+    }
     .coverletter{
         width: 100%;
     }
@@ -97,7 +122,7 @@
 
 <script>
   export default {
-    name: 'Coverletter',
+    name: 'Github',
     data () {
       return {
         msg: 'Coverletter',
