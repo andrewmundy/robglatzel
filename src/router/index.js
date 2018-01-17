@@ -17,6 +17,7 @@ Vue.component('contact', Contact)
 Vue.component('coverletter', Coverletter)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -33,7 +34,7 @@ export default new Router({
       component: Main
     },
     {
-      path: '/coverletter/:string',
+      path: '/cl/:string',
       name: 'Coverletter',
       component: Coverletter
     }
