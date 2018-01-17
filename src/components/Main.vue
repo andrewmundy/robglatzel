@@ -13,7 +13,7 @@
         <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
         <img class="profile-logo" src="../assets/Avatar.svg"> 
-        <h2 class="hidden hidden-up quote" v-infocus="'showElement-slow'">
+        <h2 class="hidden hidden-up genre-quote" v-infocus="'showElement-slow'">
           "I have a passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
         </h2>
       </div>
