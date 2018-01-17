@@ -16,13 +16,17 @@
             <!-- <h2 class="title " >Hi {{ this.parseUrl() }}! <span class="hvr-shake">👋</span></h2> -->
             <div>
                 <h2 class="quote quote-cl">
-                    "I look forward to applying my skills as a Front-End Engineer and UI/UX designer to do my very best work as a product design intern at Github."
+                    "I look forward to applying my skills as a Front-End Engineer and UI/UX designer to do my very best work as a Web Desginer at Github."
                 </h2>
-                <p class="cover-text">Although I have experience as a developer, designer, and a product designer, I am seeking this internship to accelerate this new career path as I strive to combine and push teams forward in tandem. 
-                    <br>
-                    <br>Also, as a side note- you may remember me from working behind the bar at your offices and great friends with Steve and AJ.
-                    <br>
-                    <br>So in addition to enthusiastically utilizing my design, development, and leadership skills I can also provide my skills as a master mixologizer! 🌴🍹🌴
+                <p class="cover-text">
+                    <b>Hello there 👋</b> <br><br>
+                Although I have experience as a developer, designer, and a product designer, I am seeking this position as a remote web designer to further my creative abilities and git push (sorry) the boundaries of my design career alongside GitHubs incredible design. I loved the GitHub Universe branding! ✨🚀✨
+
+                <br><br>
+                Also, as a side note- if this application is reaching the HQ you may remember me from working behind the bar at your offices and great friends with Steve and AJ. 
+
+                <br><br>
+                So in addition to enthusiastically utilizing my design, development, and leadership skills, I git commit -m “look forward to providing my skills as a web designer to further contribute to the fun, upbeat, culture and style of GitHub” 
                 </p>
             </div>
             <img class="squiggle" src="../assets/squiggle.svg">
@@ -42,7 +46,7 @@
     font-size: 1.5rem;
     padding: 2.2rem;
     width: 600px;
-    margin: auto;
+    margin: 4rem auto;
     border-radius: 2rem;
     background: #ffffff;
 }
@@ -99,7 +103,7 @@
         font-size: 1.2rem;
         padding: 1.8rem 1.2rem;
         width: auto;
-        margin: auto;
+        margin: 2rem auto;
         border-radius: 0;
         background: #ffffff;
     }
