@@ -17,7 +17,6 @@ Vue.component('contact', Contact)
 Vue.component('coverletter', Coverletter)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
