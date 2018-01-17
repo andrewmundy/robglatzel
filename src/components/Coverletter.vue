@@ -58,12 +58,6 @@
 .quote{
     width: auto;
 }
-.coverletter{
-    width: 8.5in;
-    height: 11.5in;
-    margin: auto;
-    // overflow: hidden;
-}
 .back{
     margin: 2rem;
 }
