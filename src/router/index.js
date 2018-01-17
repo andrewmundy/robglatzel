@@ -7,6 +7,7 @@ import Name from '@/components/Name'
 import Contact from '@/components/Contact'
 import Coverletter from '@/components/Coverletter'
 import Github from '@/components/Github'
+import CoverText from '@/components/CoverText'
 
 Vue.use(Router)
 
@@ -17,6 +18,7 @@ Vue.component('message', Message)
 Vue.component('contact', Contact)
 Vue.component('coverletter', Coverletter)
 Vue.component('github', Github)
+Vue.component('covertext', CoverText)
 
 export default new Router({
   routes: [
@@ -35,7 +37,7 @@ export default new Router({
       component: Main
     },
     {
-      path: '/cl/:string',
+      path: '/cl/:job/:position',
       name: 'Coverletter',
       component: Coverletter
     },

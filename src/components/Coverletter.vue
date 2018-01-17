@@ -13,10 +13,19 @@
             </div>
         <div>
             <img class="profile-logo" src="../assets/Avatar.svg"> 
-            <!-- <h2 class="title " >Hi {{ this.parseUrl() }}! <span class="hvr-shake">👋</span></h2> -->
-            <h2 class="quote">
-            "At {{ this.parseUrl() }} I look forward to sharing my passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
-            </h2>
+                <div>
+                    <h2 class="quote quote-cl">
+                        "I look forward to applying my skills as a Front-End Engineer and UI/UX designer to do my very best work as a {{this.parseUrl(position)}} at {{this.parseUrl(job)}}."
+                    </h2>
+                    <p class="cover-text">
+                        <b>Hello there 👋</b> <br><br>
+                    Although I have experience as a developer, designer, and a product designer, I am seeking this position as a {{this.parseUrl(position)}} to further my abilities and push the boundaries of my career. 
+                    <br><br>
+                    So in addition to enthusiastically utilizing my design, development, and leadership skills, I look forward to providing my skills as a {{this.parseUrl(position)}} to further contribute to the fun, upbeat, culture and style of {{this.parseUrl(job)}}” 
+                    <br><br>
+                    I look forward to contributing to {{this.parseUrl(job)}} our next great project.
+                    </p>
+                </div>
             <img class="squiggle" src="../assets/squiggle.svg">
             <a href="/"><div class="schedule cl-schedule">portfolio</div></a>
             <a href="https://drive.google.com/file/d/15ZzNHDTi7PuNY-vqS0GAV_YLAIM6Bu49/view?usp=sharing"><div class="schedule cl-schedule">resume</div></a>
@@ -29,6 +38,15 @@
 </template>
 
 <style lang="scss">
+.cover-text{
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 2.2rem;
+    width: 600px;
+    margin: 4rem auto;
+    border-radius: 2rem;
+    background: #ffffff;
+}
 .headline-cl *{
     font-size: 30px !important;
     font-weight: 200;
@@ -55,8 +73,11 @@
         font-size:42px;
     }
 }
-.quote{
-    width: auto;
+.coverletter{
+    width: 80vw;
+    // height: 11.5in;
+    margin: auto;
+    // overflow: hidden;
 }
 .back{
     margin: 2rem;
@@ -72,6 +93,17 @@
     margin: auto;
 }
  @media screen and (max-device-width: 1024px) {
+    .quote-cl{
+        font-size: 25px;
+    }
+    .cover-text{
+        font-size: 1.2rem;
+        padding: 1.8rem 1.2rem;
+        width: auto;
+        margin: 2rem auto;
+        border-radius: 0;
+        background: #ffffff;
+    }
     .coverletter{
         width: 100%;
     }
@@ -95,18 +127,19 @@
     data () {
       return {
         msg: 'Coverletter',
-        name: this.$route.params.string
+        job: this.$route.params.job,
+        position: this.$route.params.position
       }
     },
     methods: {
-      parseUrl () {
-        if (this.name) {
-          let urlString = this.name
-          let name = urlString.split('-')
+      parseUrl (str) {
+        if (str) {
+          let urlString = str
+          let job = urlString.split('-')
           let arr = []
 
-          for (var i = 0; i < name.length; i++) {
-            arr.push(name[i].charAt(0).toUpperCase() + name[i].slice(1))
+          for (var i = 0; i < job.length; i++) {
+            arr.push(job[i].charAt(0).toUpperCase() + job[i].slice(1))
           }
           return arr.join(' ')
         } else {
@@ -138,7 +171,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-
-</style>
