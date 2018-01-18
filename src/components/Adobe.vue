@@ -2,11 +2,10 @@
 <div>
     <div class="coverletter">
         <div class="header">
-            <a href="/"><div class="title cl-title">
+            <div class="title cl-title">
                 <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
                 <span class="name">ANDREW<br> MUNDY</span>
             </div>
-            </a>
             <div class="headline headline-cl"> 
                 <span class="" >Product Designer</span>
                 <span class="" >Software Engineer</span>
@@ -14,19 +13,27 @@
             </div>
         <div>
             <img class="profile-logo" src="../assets/Avatar.svg"> 
-                <div>
-                    <h2 class="quote quote-cl">
-                        "I look forward to applying my skills as a Front-End Engineer and UI/UX designer to do my very best work as a {{this.parseUrl(position)}} at {{this.parseUrl(job)}}."
-                    </h2>
-                    <p class="cover-text">
-                    <b>Hello there 👋</b> <br><br>
-                    Although I have experience as a developer, designer, and a product designer, I am seeking this position as a {{this.parseUrl(position)}} to further my abilities and push the boundaries of my roles. 
+            <!-- <h2 class="title " >Hi {{ this.parseUrl() }}! <span class="hvr-shake">👋</span></h2> -->
+            <div>
+                <h2 class="quote quote-cl">
+                    "I look forward to applying my skills as a Front-End Engineer and UI/UX designer to do my very best work as a Software Engineer at Adobe."
+                </h2>
+                <p class="cover-text">
+                    <b>Hello there 👋</b> 
+
                     <br><br>
-                    In addition to enthusiastically utilizing my design, development, and leadership skills, I am excited to contribute to the fun, upbeat, culture and style of {{this.parseUrl(job)}}.
+                    With my experience as a developer, designer, and a product designer, I am excited to have the opportunity to apply as a software developer and contribue to the stock team. 
+
                     <br><br>
-                    I look forward to contributing to {{this.parseUrl(job)}} our next great project.
-                    </p>
-                </div>
+                    So in addition to enthusiastically utilizing my design, development, and leadership skills, I look forward to providing those skills to furthering the photo stock team and their initiatives. Together we can end awful assets from Google images and make sure photographers are compensated! 
+                    
+                    <br><br>
+                    Why do I want to work at Adobe? Well, Adobe is the base of the worlds projects, teams, products. I have been honored to have the opportunity to utilize many of Adobe's tools since I was 11 and attribute much of my creativity to the continued support and standards that Adobe still pioneers.
+                    
+                    <br><br>
+                    Please, follow the links below for my resume and portfolio and please reach out if I can answer any further questions. Thanks! ✨🍾✨
+                </p>
+            </div>
             <img class="squiggle" src="../assets/squiggle.svg">
             <a href="/"><div class="schedule cl-schedule">portfolio</div></a>
             <a href="https://drive.google.com/file/d/15ZzNHDTi7PuNY-vqS0GAV_YLAIM6Bu49/view?usp=sharing"><div class="schedule cl-schedule">resume</div></a>
@@ -124,23 +131,22 @@
 
 <script>
   export default {
-    name: 'Coverletter',
+    name: 'Github',
     data () {
       return {
         msg: 'Coverletter',
-        job: this.$route.params.job,
-        position: this.$route.params.position
+        name: this.$route.params.string
       }
     },
     methods: {
-      parseUrl (str) {
-        if (str) {
-          let urlString = str
-          let job = urlString.split('-')
+      parseUrl () {
+        if (this.name) {
+          let urlString = this.name
+          let name = urlString.split('-')
           let arr = []
 
-          for (var i = 0; i < job.length; i++) {
-            arr.push(job[i].charAt(0).toUpperCase() + job[i].slice(1))
+          for (var i = 0; i < name.length; i++) {
+            arr.push(name[i].charAt(0).toUpperCase() + name[i].slice(1))
           }
           return arr.join(' ')
         } else {
@@ -172,3 +178,7 @@
     }
   }
 </script>
+
+<style lang="scss">
+
+</style>
