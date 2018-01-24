@@ -20,11 +20,11 @@
                     </h2>
                     <p class="cover-text">
                     <b>Hello there 👋</b> <br><br>
-                    Although I have experience as a developer, designer, and a product designer, I am seeking this position as a {{this.parseUrl(position)}} to further my abilities and push the boundaries of my roles. 
+                    Utilizing my experience as a developer, designer, and a product designer, I am seeking this position as a {{this.parseUrl(position)}} to further my abilities and push the boundaries of my roles. 
                     <br><br>
                     In addition to enthusiastically utilizing my design, development, and leadership skills, I am excited to contribute to the fun, upbeat, culture and style of {{this.parseUrl(job)}}.
                     <br><br>
-                    I look forward to contributing to {{this.parseUrl(job)}} our next great project.
+                    I look forward to contributing to {{this.parseUrl(job)}} and our next great project.
                     </p>
                 </div>
             <img class="squiggle" src="../assets/squiggle.svg">
