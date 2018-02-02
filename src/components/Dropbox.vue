@@ -22,7 +22,7 @@
                     <b>Hello there <span class="hvr-shake">👋</span></b> 
 
                     <br><br>
-                    With my experience as a developer, designer, and a product designer, I am excited to have the opportunity to apply as a Web Developer to contribue and collaborate at Dropbox. 
+                    With my experience as a developer, designer, and a product designer, I am excited to have the opportunity to apply as a Web Developer to contribute and collaborate at Dropbox. 
 
                     <br><br>
                     So in addition to enthusiastically utilizing my design, development, and leadership skills, I look forward to providing those skills and embracing the dynamic nature of front-end development together with the team. Together we can enable our current and future users to collaborate their best work- together.
