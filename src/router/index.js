@@ -9,6 +9,7 @@ import Coverletter from '@/components/Coverletter'
 import Github from '@/components/Github'
 import CoverText from '@/components/CoverText'
 import Adobe from '@/components/Adobe'
+import Dropbox from '@/components/Dropbox'
 
 Vue.use(Router)
 
@@ -21,6 +22,7 @@ Vue.component('coverletter', Coverletter)
 Vue.component('github', Github)
 Vue.component('covertext', CoverText)
 Vue.component('adobe', Adobe)
+Vue.component('dropbox', Dropbox)
 
 export default new Router({
   routes: [
@@ -49,9 +51,14 @@ export default new Router({
       component: Github
     },
     {
-      path: '/adobe',
-      name: 'Adobe',
-      component: Adobe
+      path: '/dropbox',
+      name: 'DropBox',
+      component: Dropbox
+    },
+    {
+      path: '/github',
+      name: 'Github',
+      component: Github
     }
   ]
 })
