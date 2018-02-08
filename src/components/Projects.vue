@@ -5,6 +5,35 @@
         "With experience and accessibility at the forefront of my development initiatives, I strive to build products for all the world’s users and all of their devices."
     </h2>
     <div class="projects">
+        <div class="project hidden hidden-up transparent" v-infocus="'showElement'">
+            <a target="_blank" href="/">
+            <img class="avatar" src="../assets/Avatar.svg" >
+            <div class="text">
+                <h1>Andrew Mundy Dot Net</h1>
+                <h2>THIS WEBPAGE</h2>
+                <div class="badges">
+                    <img src="../assets/icons/react.svg">
+                    <img src="../assets/icons/html5.svg">
+                    <img src="../assets/icons/sass.svg">
+                    <img src="../assets/icons/cssgrid.svg">
+                    <img src="../assets/icons/firebase.svg">
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="project hidden hidden-up transparent" v-infocus="'showElement'">
+            <a target="_blank" href="https://github.com/andrewmundy/hipdrip">
+            <img src="../assets/projects/colorpicker.png">
+            <div class="text" >
+                <h1>HipDrips</h1>
+                <h2>Paste your Hex!</h2>
+                <div class="badges">
+                    <img src="../assets/icons/swift.svg">
+                    <img src="../assets/icons/gem.svg">
+                </div>
+            </div>
+            </a>
+        </div>
         <div class="project hidden hidden-up" v-infocus="'showElement'">
             <a target="_blank" href="http://www.batchplz.com/">
             <img src="../assets/projects/batch.jpg">
@@ -202,6 +231,21 @@ export default {
 </script>
 
 <style lang="scss">
+    .transparent{
+        background:none !important;
+        img{
+            max-width:100%;
+        }
+        .avatar{
+            max-width: 89%;
+            margin: 1rem;
+        }
+        .text{
+            padding-top:5px;
+            background:white;
+            margin-top: -5px;
+        }
+    }
     .badges{
         display: flex;
         justify-content: space-around;
