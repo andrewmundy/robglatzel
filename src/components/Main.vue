@@ -3,18 +3,18 @@
       <div class="header">
         <div class="title hidden hidden-left" v-infocus="'showElement'">
           <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
-          <span class="name">ANDREW<br> MUNDY</span>
+          <span class="name">ANDREW <br> MUNDY</span>
         </div>
         <div class="headline"> 
-          <span class="hidden hidden-left-fast" v-infocus="'showElement'">Product Designer</span>
-          <span class="hidden hidden-right" v-infocus="'showElement'">Software Engineer</span>
-          <span class="hidden hidden-left" v-infocus="'showElement'">UI/UX </span>
+          <span class="hidden hidden-left-fast" v-infocus="'showElement'">{{fireInfo.headline1}}</span>
+          <span class="hidden hidden-right" v-infocus="'showElement'">{{fireInfo.headline2}}</span>
+          <span class="hidden hidden-left" v-infocus="'showElement'">{{fireInfo.headline3}}</span>
         </div>
         <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
         <img class="profile-logo" src="../assets/Avatar.svg"> 
         <h2 class="hidden hidden-up genre-quote" v-infocus="'showElement-slow'">
-          "I have a passion for creating beautiful, functional, rock solid products and experiences from within small agile teams."
+          {{fireInfo.intro}}
         </h2>
       </div>
       
@@ -25,14 +25,24 @@
       <!-- //////////
       /// PROJECT ///
       //////////////////////////////// -->
-      <projects/>
+      <projects 
+        v-bind="{
+          fireGenres,
+          genres
+        }"
+      />
 
       <div class="spacer"></div>
 
       <!-- //////////
       /// CONTACT ///
       //////////////////////////////// -->
-      <contact/>
+      <contact 
+        v-bind="{
+          fireInfo,
+          fireSocial
+        }"
+      />
 
     <img class="alt-bg" src="../assets/background1:2.svg">
     <img class="alt-bg1" src="../assets/first ball.svg">  
@@ -40,19 +50,64 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import firebase from 'firebase'
+import VueFire from 'vuefire'
+
+let config = {
+  apiKey: 'AIzaSyCsHlnK6UDzQJRGraQv1iHIaFchz7eTlPw',
+  authDomain: 'andrewmundy2-f4194.firebaseapp.com',
+  databaseURL: 'https://andrewmundy2-f4194.firebaseio.com',
+  projectId: 'andrewmundy2-f4194',
+  storageBucket: 'andrewmundy2-f4194.appspot.com',
+  messagingSenderId: '862963492633'
+}
+
+Vue.use(VueFire)
+// Vue.use(VueResource)
+let app = firebase.initializeApp(config)
+let db = app.database()
+// let storage = firebase.storage()
 export default {
   name: 'Main',
   data () {
     return {
-      msg: 'Main Page'
+      msg: 'Main Page',
+      genres: [],
+      projects: {}
     }
   },
   methods: {
+    firebaseData () {
+      let ref = db.ref('genres')
+      let self = this
+      ref.on('value', function (snapshot) {
+        self.genres = Object.entries(snapshot.val())
+      }, function (errorObject) {
+        console.log('The read failed: ' + errorObject.code)
+      })
+    },
     scrollMeTo (refName) {
       var element = this.$refs[refName]
       var top = element.offsetTop
       window.scrollTo(0, top)
     }
+  },
+  firebase: {
+    fireSocial: {
+      source: db.ref('socials')
+    },
+    fireInfo: {
+      source: db.ref('info'),
+      asObject: true
+    },
+    fireGenres: {
+      source: db.ref('genres'),
+      asObject: true
+    }
+  },
+  mounted: function () {
+    this.firebaseData()
   },
   directives: {
     infocus: {

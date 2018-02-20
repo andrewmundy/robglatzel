@@ -10,7 +10,9 @@ import Github from '@/components/Github'
 import CoverText from '@/components/CoverText'
 import Adobe from '@/components/Adobe'
 import Dropbox from '@/components/Dropbox'
+import VueFire from 'vuefire'
 
+Vue.use(VueFire)
 Vue.use(Router)
 
 Vue.component('main-content', Main)

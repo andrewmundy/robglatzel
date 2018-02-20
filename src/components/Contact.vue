@@ -1,26 +1,17 @@
 <template>
     <section ref="contact" id="contact" class="contact">
         <div class="spacer"></div>
-
         <h2 class="hidden hidden-up genre-quote" v-infocus="'showElement'">
-          "Thanks for stopping by. Developing ones personal style, image, brand, is a lifelong and often grueling process. I am honored that you found your way to mine and I hope you enjoyed your stay." 
-          <p>
-          Please, reach out. Lets do great things.
-          </p>
+          {{fireInfo.outro}}
         </h2>
         <div class="schedule-div">
           <a class="schedule" href="" onclick="Calendly.showPopupWidget('https://calendly.com/andrewmundy/60min');return false;">
             Take a Look at my Schedule
           </a>
-          <p>
-            <h1 class="hvr-bob">
-              👆
-            </h1>
-          </p>
+          <p> <h1 class="hvr-bob">👆</h1> </p>
         </div>
         <message/>
 
-        <!-- <div class="spacer"></div> -->
         <div class="socials">
           <a href="https://github.com/andrewmundy" alt="github"><img class="hidden hidden-up" v-infocus="'showElement-fast'" src="../assets/icons/github.svg"></a>
           <a href="https://codepen.io/andrewmundy/" alt="codepen"><img class="hidden hidden-up-fast" v-infocus="'showElement'" src="../assets/icons/codepen.svg"></a>
@@ -43,6 +34,10 @@
 <script>
 export default {
   name: 'Contact',
+  props: [
+    'fireInfo',
+    'fireSocial'
+  ],
   data () {
     return {
       msg: 'Main Page'

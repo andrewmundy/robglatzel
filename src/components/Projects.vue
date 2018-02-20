@@ -1,198 +1,27 @@
 <template>
 <div class="section">
-    <h1 class="genre-titles">Development</h1>
-    <h2 class="genre-quote hidden hidden-left" v-infocus="'showElement'">
-        "With experience and accessibility at the forefront of my development initiatives, I strive to build products for all the world’s users and all of their devices."
-    </h2>
-    <div class="projects">
-        <div class="project hidden hidden-up transparent" v-infocus="'showElement'">
-            <a target="_blank" href="/">
-            <img class="avatar" src="../assets/Avatar.svg" >
-            <div class="text">
-                <h1>Andrew Mundy Dot Net</h1>
-                <h2>THIS WEBPAGE</h2>
-                <div class="badges">
-                    <img src="../assets/icons/react.svg">
-                    <img src="../assets/icons/html5.svg">
-                    <img src="../assets/icons/sass.svg">
-                    <img src="../assets/icons/cssgrid.svg">
-                    <img src="../assets/icons/firebase.svg">
-                </div>
+    <div v-for="genre in genres.slice().reverse()" :key="genre.id">
+        <h1 class="genre-titles">
+            {{genre[1].title}}
+        </h1>
+        <h2 class="genre-quote hidden hidden-left" v-infocus="'showElement'">
+            {{genre[1].description}}
+        </h2>
+        <div class="projects">
+            <div v-for="project in genre[1].projects.slice(1)" :key="project && project.id" class="project hidden hidden-up" v-infocus="'showElement'">
+                <a target="_blank" v-bind:href="project.link">
+                    <img :src="project && project.img">
+                    <div class="text">
+                        <h1>{{project && project.title}}</h1>
+                        <h2>{{project && project.subtitle}}</h2>
+                        <!-- <p>{{project && project.info}}</p> -->
+                        <p></p>
+                    </div>
+                </a>
             </div>
-            </a>
         </div>
-        <div class="project hidden hidden-up transparent" v-infocus="'showElement'">
-            <a target="_blank" href="https://github.com/andrewmundy/hipdrip">
-            <img src="../assets/projects/colorpicker.png">
-            <div class="text" >
-                <h1>HipDrips</h1>
-                <h2>Paste your Hex!</h2>
-                <div class="badges">
-                    <img src="../assets/icons/swift.svg">
-                    <img src="../assets/icons/gem.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement'">
-            <a target="_blank" href="http://www.batchplz.com/">
-            <img src="../assets/projects/batch.jpg">
-            <div class="text">
-                <h1>BatchPlz</h1>
-                <h2>Cocktail Batching App</h2>
-                <div class="badges">
-                    <img src="../assets/icons/react.svg">
-                    <img src="../assets/icons/html5.svg">
-                    <img src="../assets/icons/sass.svg">
-                    <img src="../assets/icons/cssgrid.svg">
-                    <img src="../assets/icons/firebase.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
-            <a target="_blank" href="https://ceelow.herokuapp.com/">
-            <img src="../assets/projects/ceelo.jpg">
-            <div class="text">
-                <h1>Cee-Lo</h1>
-                <h2>Gambling Fun!</h2>
-                <div class="badges">
-                    <img src="../assets/icons/vuejs.svg">
-                    <img src="../assets/icons/html5.svg">
-                    <img src="../assets/icons/sass.svg">
-                    <img src="../assets/icons/cssgrid.svg">
-                    <img src="../assets/icons/firebase.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project itsalive hidden hidden-up-fast" v-infocus="'showElement'">
-            <a target="_blank" href="https://codepen.io/andrewmundy/full/LzzKoX/">
-            <img src="../assets/projects/itsalive.svg">
-            <div class="text">
-                <h1>Its Alive!</h1>
-                <h2>SVG Animation</h2>
-                <div class="badges">
-                    <img src="../assets/icons/svg.svg">
-                    <img src="../assets/icons/html5.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
-            <a target="_blank" href="http://www.pokequotes.com/">
-            <img src="../assets/projects/pokequotes.jpg">
-            <div class="text">
-                <h1>PokeQuotes</h1>
-                <h2>Get Inspire!</h2>
-                <div class="badges">
-                    <img src="../assets/icons/html5.svg">
-                    <img src="../assets/icons/bootstrap.svg">
-                    <img src="../assets/icons/js.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up-fast" v-infocus="'showElement'">
-            <a target="_blank" href="https://github.com/andrewmundy/jackhandeyapi">
-            <img src="../assets/projects/jackhandey.jpg">
-            <div class="text">
-                <h1>Jack Handey API</h1>
-                <h2>138 Legendary Quotes</h2>
-                <div class="badges">
-                    <img src="../assets/icons/mongodb.svg">
-                    <img src="../assets/icons/node-js.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-
     <div class="spacer"></div>
-
-    <img class="hidden hidden-left squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
-
-    <!-- <div class="spacer"></div> -->
-
-    <h1 class="genre-titles">Design</h1>
-    <h2 class="genre-quote hidden hidden-right" v-infocus="'showElement'">
-        "Design has always been at the forefront of my being. While tools and styles evolve over time, my basic principals have always remained." <p><i>Inviting, functional, personal, fun.</i></p>
-    </h2>
-    <div class="projects">
-        <div class="project hidden hidden-up-fast" v-infocus="'showElement'">
-            <a target="_blank" href="https://www.behance.net/gallery/56262049/Chlorophylled-with-indifference">
-            <img src="../assets/projects/chloriphilled.jpg">
-            <div class="text">
-                <h1>Chloriphilled With Indifference</h1>
-                <h2>They're Making Me Awkward</h2>
-                <div class="badges">
-                    <img alt="sketch" src="../assets/icons/gem.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
-            <a target="_blank" href="https://www.behance.net/gallery/54140457/Andrewm-Undy">
-            <img src="../assets/projects/amlogo.jpg">
-            <div class="text">
-                <h1>Mr. Mund</h1>
-                <h2>My Special Enthused Mascot</h2>
-                <div class="badges">
-                    <img alt="sketch" src="../assets/icons/gem.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement'">
-            <a target="_blank" href="https://www.behance.net/gallery/53306869/Paintings-Traditional-Art-Styles">
-            <img src="../assets/projects/slowventures.png">
-            <div class="text">
-                <h1>Slow Ventures</h1>
-                <h2>Branding & UI/UX</h2>
-                <div class="badges">
-                    <img alt="sketch" src="../assets/icons/gem.svg">
-                    <img alt="sketch" src="../assets/icons/paint-brush.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up-fast" v-infocus="'showElement'">
-            <a target="_blank" href="https://www.behance.net/gallery/43147761/Nopal-en-Movimiento">
-            <img src="../assets/projects/nopa.gif">
-            <div class="text">
-                <h1>Nopal en Movimiento</h1>
-                <h2>Animated Sprites</h2>
-                <div class="badges">
-                    <img alt="sketch" src="../assets/icons/ai.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement-fast'">
-            <a target="_blank" href="https://www.behance.net/gallery/53304567/Various-Gif-Assets">
-            <img src="../assets/projects/sensify.jpg">
-            <div class="text">
-                <h1>Sensify Security</h1>
-                <h2>Web Assets</h2>
-                <div class="badges">
-                    <img alt="sketch" src="../assets/icons/ai.svg">
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="project hidden hidden-up" v-infocus="'showElement'">
-            <a target="_blank" href="https://www.behance.net/gallery/53304567/Various-Gif-Assets">
-            <img src="../assets/projects/noisepop.jpg">
-            <div class="text">
-                <h1>Noise Pop</h1>
-                <h2>Web and Print Advertising</h2>
-                <div class="badges">
-                    <img alt="sketch" src="../assets/icons/ai.svg">
-                    <img alt="sketch" src="../assets/icons/pen-alt.svg">
-                </div>
-            </div>
-            </a>
-        </div>
+    <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
     </div>
 </div>
 </template>
@@ -200,9 +29,34 @@
 <script>
 export default {
   name: 'Projects',
+  props: [
+    'fireGenres',
+    'genres'
+  ],
   data () {
     return {
-      msg: 'hi'
+      msg: 'hi',
+
+      newProjects: [],
+      projects: '',
+      project: '',
+      badges: '',
+      badge: ''
+    }
+  },
+  methods: {
+    startFrom (arr, idx) {
+      return arr.slice(idx)
+    },
+    pushNewProjects () {
+    },
+    renderBadge (id, genre) {
+      let self = this
+      console.log(self.fireGenre[genre])
+      let badges = self.fireGenres[genre].project[id].badges
+      badges.map(function (badge) {
+        return `<img :src='${badge}'>`
+      })
     }
   },
   directives: {
