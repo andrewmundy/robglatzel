@@ -90,7 +90,7 @@ export default {
       })
     },
     scrollMeTo (refName) {
-      var element = this.$refs[refName]
+      // var element = this.$refs[refName]
       // var top = element.offsetTop
       window.scrollTo(0, 20000)
     }
