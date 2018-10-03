@@ -40,8 +40,8 @@
         </div>
         </div>
     </div>
-    <img class="alt-bg" src="../assets/background1:2.svg">
-    <img class="alt-bg1" src="../assets/first ball.svg">  
+    <!-- <img class="alt-bg" src="../assets/background1:2.svg">
+    <img class="alt-bg1" src="../assets/first ball.svg">   -->
 </div>
 </template>
 

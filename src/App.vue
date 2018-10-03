@@ -20,8 +20,9 @@ export default {
      text-align: center;
      color: #2c3e50;
      padding: 0px;
-     background: url("./assets/Background2:2.svg");
-     background-size: cover;
+    //  background: url("./assets/Background2:2.svg");
+     background: url("./assets/background2-bw.png");
+     background-size: 100vw;
      overflow: hidden;
  }
 </style>

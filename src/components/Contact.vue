@@ -1,7 +1,7 @@
 <template>
     <section ref="contact" id="contact" class="contact">
         <div class="spacer"></div>
-        <h2 class="hidden hidden-up genre-quote" v-infocus="'showElement'">
+        <h2 class="hidden hidden-up genre-quote-white" v-infocus="'showElement'">
           {{fireInfo.outro}}
         </h2>
         <div class="schedule-div">

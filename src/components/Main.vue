@@ -44,8 +44,10 @@
         }"
       />
 
-    <img class="alt-bg" src="../assets/background1:2.svg">
-    <img class="alt-bg1" src="../assets/first ball.svg">  
+    <!-- <img class="alt-bg" src="../assets/background1:2.svg">
+    <img class="alt-bg1" src="../assets/first ball.svg"> -->
+    <img class="alt-bg" src="../assets/background1-bw.png">
+    <!-- <img class="alt-bg1" src="../assets/first-ball-bw.png"> -->
     </div>
 </template>
 
@@ -89,8 +91,8 @@ export default {
     },
     scrollMeTo (refName) {
       var element = this.$refs[refName]
-      var top = element.offsetTop
-      window.scrollTo(0, top)
+      // var top = element.offsetTop
+      window.scrollTo(0, 20000)
     }
   },
   firebase: {

@@ -180,11 +180,21 @@ export default {
     }
     .genre-titles{
         text-align: left;
-        font-size: 2rem;
-        color:white;
-        padding: 1rem 0 0 5rem;
+        font-size: 3rem;
+        color:black;
+        padding: 1.5rem 0 0 5rem;
     }
     .genre-quote{
+        padding: 2rem;
+        color:black;
+        font-weight: 500;
+        font-style: normal;
+        font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+        font-size: 32px;
+        width: 50vw;
+        margin: auto;
+    }    
+    .genre-quote-white{
         padding: 2rem;
         color:white;
         font-weight: 500;
@@ -211,6 +221,12 @@ export default {
         font-size: 22px;
         width: 90vw;    
     }
+    .genre-quote-white{
+        color:white;
+        padding:0;
+        font-size: 22px;
+        width: 90vw;    
+    }    
     .projects{
         flex-wrap: wrap;
         padding:0px;
