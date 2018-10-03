@@ -168,15 +168,16 @@ export default {
             font-size:0.8rem;
             color:rgba(0, 0, 0, 0.788);
         }
+        h1{
+            font-size:1rem;
+            color:black;
+            font-weight: 600;
+        }
         h2{
-            font-size:0.8rem;
+            font-size:1rem;
+            font-weight: 400;
             color:rgba(0, 0, 0, 0.822);
         }
-    }
-    .text h1, .text h2{
-        color:black;
-        margin:0.2rem;
-        font-size:1rem;
     }
     .genre-titles{
         text-align: left;
@@ -186,7 +187,7 @@ export default {
     }
     .genre-quote{
         padding: 2rem;
-        color:black;
+        color:black !important;
         font-weight: 500;
         font-style: normal;
         font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;

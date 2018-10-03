@@ -21,7 +21,7 @@ export default {
      color: #2c3e50;
      padding: 0px;
     //  background: url("./assets/Background2:2.svg");
-     background: url("./assets/background2-bw.png");
+     background: url("./assets/background2-bw.svg");
      background-size: 100vw;
      overflow: hidden;
  }
