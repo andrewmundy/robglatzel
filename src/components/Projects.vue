@@ -9,13 +9,12 @@
         </h2>
         <div class="projects">
             <div v-for="project in genre[1].projects.slice(1)" :key="project && project.id" class="project hidden hidden-up" v-infocus="'showElement'">
-                <a target="_blank" v-bind:href="project.link">
+                <a v-bind="{project}" :href="'/#/project/' + project.title" >
                     <img :src="project && project.img">
                     <div class="text">
                         <h1>{{project && project.title}}</h1>
                         <h2>{{project && project.subtitle}}</h2>
-                        <!-- <p>{{project && project.info}}</p> -->
-                        <p></p>
+                        
                     </div>
                 </a>
             </div>
@@ -36,7 +35,6 @@ export default {
   data () {
     return {
       msg: 'hi',
-
       newProjects: [],
       projects: '',
       project: '',
@@ -52,7 +50,6 @@ export default {
     },
     renderBadge (id, genre) {
       let self = this
-      console.log(self.fireGenre[genre])
       let badges = self.fireGenres[genre].project[id].badges
       badges.map(function (badge) {
         return `<img :src='${badge}'>`
@@ -130,12 +127,12 @@ export default {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
         img{
             width:100%;
-            filter:opacity(0.8);
+            filter:opacity(1);
             transition: filter 0.3s ease-in-out;
         }
     }
     .project img:hover, .project-am img:hover{
-        filter:opacity(1);
+        filter:opacity(0.8);
     }
     .project-am{
         position: relative;

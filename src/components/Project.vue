@@ -2,9 +2,8 @@
   <div>
     <div class="name">
       <div class="header">
-        <h1 class="title hidden hidden-left" v-infocus="'showElement'">Hello {{ this.parseUrl() }}!
-          <span class="hvr-shake">👋</span>
-        </h1>
+        <h1 class="title  hidden-left" v-infocus="'showElement'">{{genres}}</h1>
+        
         <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
         <br>
         <a class="schedule back" href="/"> back </a>
@@ -13,6 +12,7 @@
     <div class="spacer"></div>
     <contact/>
     <img class="alt-bg" src="../assets/background1-bw.svg">
+    
   </div>
 </template>
 
@@ -40,6 +40,7 @@
     }
     .title {
       font-size: 5rem;
+      color:black;
     }
     .squiggle {
       padding: 3rem 0;
@@ -50,12 +51,21 @@
 
 <script>
   export default {
-    name: 'Name',
+    name: 'Project',
+    props: [
+      'fireGenres',
+      'genres',
+      'project'
+    ],
     data () {
       return {
         msg: 'Name',
-        name: this.$route.params.name
+        name: this.$route.params.name,
+        entries: {},
+        entrie: {}
       }
+    },
+    mounted () {
     },
     methods: {
       parseUrl () {

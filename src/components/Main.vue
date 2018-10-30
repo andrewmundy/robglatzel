@@ -32,6 +32,14 @@
         }"
       />
 
+      <project 
+        :style="{display:'none'}"
+        v-bind="{
+          genres,
+          fireInfo
+        }"
+      />
+
       <div class="spacer"></div>
 
       <!-- //////////
@@ -57,7 +65,7 @@ import firebase from 'firebase'
 import VueFire from 'vuefire'
 
 let config = {
-  apiKey: 'AIzaSyCsHlnK6UDzQJRGraQv1iHIaFchz7eTlPw',
+  apiKey: process.env.FIRE_KEY,
   authDomain: 'andrewmundy2-f4194.firebaseapp.com',
   databaseURL: 'https://andrewmundy2-f4194.firebaseio.com',
   projectId: 'andrewmundy2-f4194',
@@ -84,7 +92,8 @@ export default {
       let ref = db.ref('genres')
       let self = this
       ref.on('value', function (snapshot) {
-        self.genres = Object.entries(snapshot.val())
+        let entries = Object.entries(snapshot.val())
+        self.genres = entries
       }, function (errorObject) {
         console.log('The read failed: ' + errorObject.code)
       })

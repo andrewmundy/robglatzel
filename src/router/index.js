@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/components/Main'
 import Projects from '@/components/Projects'
+import Project from '@/components/Project'
 import Message from '@/components/Message'
 import Name from '@/components/Name'
 import Contact from '@/components/Contact'
@@ -17,6 +18,7 @@ Vue.use(Router)
 
 Vue.component('main-content', Main)
 Vue.component('name-content', Name)
+Vue.component('project', Project)
 Vue.component('projects', Projects)
 Vue.component('message', Message)
 Vue.component('contact', Contact)
@@ -37,6 +39,11 @@ export default new Router({
       path: '/hello/:name',
       name: 'Name',
       component: Name
+    },
+    {
+      path: '/project/:name',
+      name: 'Project',
+      component: Project
     },
     {
       path: '*',
