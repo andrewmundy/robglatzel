@@ -65,7 +65,7 @@ import firebase from 'firebase'
 import VueFire from 'vuefire'
 
 let config = {
-  apiKey: 'AIzaSyCsHlnK6UDzQJRGraQv1iHIaFchz7eTlPw',
+  apiKey: process.env.FIRE_KEY,
   authDomain: 'andrewmundy2-f4194.firebaseapp.com',
   databaseURL: 'https://andrewmundy2-f4194.firebaseio.com',
   projectId: 'andrewmundy2-f4194',
