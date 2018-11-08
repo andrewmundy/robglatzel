@@ -63,7 +63,6 @@
 import Vue from 'vue'
 import firebase from 'firebase'
 import VueFire from 'vuefire'
-
 let config = {
   apiKey: process.env.FIRE_KEY,
   authDomain: 'andrewmundy2-f4194.firebaseapp.com',
@@ -119,6 +118,7 @@ export default {
   },
   mounted: function () {
     this.firebaseData()
+    console.log(process.env.FIRE_KEY + 'fire')
   },
   directives: {
     infocus: {
