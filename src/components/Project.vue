@@ -3,7 +3,7 @@
     <div class="page section">
         <div class="project-header">
             <div v-html="content.title" class="title"></div>
-            <p>{{content.fields.join("  ")}}</p>
+            <p>{{content.fields ? content.fields.join(" &nbsp &nbsp"): null}}</p>
 
             <div class="info">
                 <div class="intro">
@@ -111,7 +111,6 @@
             text-align: left;
             font-size: 1.3rem;
         }
-        
     }
 }
 .title{
@@ -196,17 +195,97 @@
   }
 
   @media screen and (max-device-width: 1024px) {
+      .bullets{
+          .bullet{
+              flex-direction: column;
+              margin:2rem auto;
+              width: 100%;
+              justify-content: center;
+              img{
+                  width:100%;
+                  border-radius: 0px;
+              }
+              span{
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                font-size: 1rem;
+                  p{
+                      padding:0px;
+                      text-align: center;
+
+                  }
+              }
+          }
+      }
+    .bullet:nth-child(2n){
+        flex-direction: column !important;
+        margin:auto;
+        width: 100%;
+        justify-content: center;
+        span{
+            text-align: center;
+        }
+    }
+    .bullet:nth-child(4n){
+        justify-content: center;
+        margin-top: 1rem;
+        flex-direction: column;
+        img{
+            width:100%;
+        }
+        span{
+            margin:auto;
+            padding:1rem;
+            width: 100%;
+            text-align: cemter;
+            font-size: 1rem;
+        }
+    }
+    .close{
+        margin:1rem;
+        padding:1.5rem;
+        box-shadow: -5px 5px 0px black;
+        font-size: 1.2rem;
+    }
+    .page{
+        width:100%;
+    }
     .genre-quote {
       font-size: 20px;
       width: 85vw;
       padding: 0.5rem;
     }
     .title {
-      font-size: 5rem;
+      font-size: 1rem !important;
       color:black;
     }
     .squiggle {
       padding: 3rem 0;
+    }
+    .intro{
+        flex-direction: column;
+        width:95%;
+        margin:2rem auto;
+        .ask{
+            margin:auto;
+            text-align:center;
+            font-size: 1.2rem;
+            padding:1rem;
+            width:90%;
+            div{
+                padding:0px;
+                margin-bottom: 1rem;
+            }
+        }
+        .blurb{
+            width: 100%;
+            font-size:1rem;
+            padding:0px;
+            .blurb2{
+                font-size:1rem;
+            }
+        }
     }
   }
 
@@ -243,7 +322,7 @@
               let newObj = {}
               for (let i = 0; i < data.projects.length; i++) {
                 newObj[data.projects[i].name] = data.projects[i]
-                console.log(data.projects[i])
+                // console.log(data.projects[i])
               }
               let name = this.parseUrl()
               let url = newObj[name].id
@@ -253,8 +332,8 @@
                 .then(res => res.json())
                 .then(async (data) => {
                   let modules = {}
-                  console.log(data.project.colors[0])
-                  console.log(data.project.modules)
+                //   console.log(data.project.colors[0])
+                //   console.log(data.project.modules)
                   modules.fields = data.project.fields
                   modules.title = data.project.modules[0].text
                   modules.ask = data.project.modules[1].text_plain
@@ -273,23 +352,30 @@
                     }
                   }
 
-                  console.log(modules.bullets)
+                //   console.log(modules.bullets)
                   this.content = modules
                 })
                 // await this.setState({
                 //     entries: image
                 // })
+            }).catch(function () {
+              console.log('Behance, promise Err')
             })
       },
       parseUrl () {
         let string = this.name
-        let name = string.split('-')
-        let arr = []
+        let name = ''
+        if (string) {
+          string.split('-')
+          let arr = []
 
-        for (var i = 0; i < name.length; i++) {
-          arr.push(name[i].charAt(0).toUpperCase() + name[i].slice(1))
+          for (var i = 0; i < name.length; i++) {
+            arr.push(name[i].charAt(0).toUpperCase() + name[i].slice(1))
+          }
+          return arr.join(' ')
+        } else {
+          return console.log('no strings to parse yet')
         }
-        return arr.join(' ')
       }
     },
     directives: {

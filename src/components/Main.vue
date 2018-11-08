@@ -118,7 +118,22 @@ export default {
   },
   mounted: function () {
     this.firebaseData()
-    console.log(process.env.FIRE_KEY + 'fire')
+    // console.log(process.env.FIRE_KEY + 'fire')
+    var styles = [
+      'background: linear-gradient(35deg,#00ffb7, #6900E9)',
+      'font-family: arial',
+      'font-size:20px',
+      'border-radius:10px',
+      'margin:10px',
+      'color: white',
+      'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)',
+      'text-align: center',
+      'display: block',
+      'padding:35px'
+      // 'font-weight: bold'
+    ].join(';')
+
+    console.info('%c Welcome to andrewmundy dot net 👋! Feel free to dig around 🕳, if something catches your eye 👁 or youre curious how I did a thing 🤔, peep my source code at https://github.com/andrewmundy/AndrewMundy2.0 🖥 or send me a message 📬!', styles)
   },
   directives: {
     infocus: {
