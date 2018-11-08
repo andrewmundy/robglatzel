@@ -8,7 +8,14 @@
          max-width: 12px;
      }
  }
-
+.banner-image{
+    width:100px;
+    height: 100px;
+}
+.section{
+    position: relative;
+    z-index: 2;
+}
  .schedule {
      border: 5px solid #00ffb7;
      background: #00f3ae;
@@ -25,6 +32,7 @@
      width: 100vw;
      position: fixed;
      z-index: 0;
+     opacity:0.5;
  }
 
  .alt-bg1 {

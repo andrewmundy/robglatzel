@@ -103,10 +103,6 @@ export default {
         align-content: center;
         padding:1rem 2rem;
     }
-    .section{
-        position: relative;
-        z-index: 2;
-    }
     .projects{
         min-height: 500px;
         width:100vw;
