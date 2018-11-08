@@ -364,19 +364,15 @@
       },
       parseUrl () {
         let string = this.name
-        let name = ''
-        if (string) {
-          string.split('-')
-          let arr = []
+        let name = string.split('-')
+        let arr = []
 
-          for (var i = 0; i < name.length; i++) {
-            arr.push(name[i].charAt(0).toUpperCase() + name[i].slice(1))
-          }
-          return arr.join(' ')
-        } else {
-          return console.log('no strings to parse yet')
+        for (var i = 0; i < name.length; i++) {
+          arr.push(name[i].charAt(0).toUpperCase() + name[i].slice(1))
         }
+        return arr.join(' ')
       }
+  
     },
     directives: {
       infocus: {
