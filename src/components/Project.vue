@@ -70,7 +70,7 @@
     .bullet{
         display: flex;
         justify-content: space-between;
-        margin-top: 5rem;
+        margin-top: 8rem;
         text-shadow: 1px 1px 0px white;
         align-items: flex-start;
         img{
@@ -95,23 +95,23 @@
             text-align: right;
         }
     }
-    .bullet:nth-child(4n){
-        // flex-direction: row-reverse;
-        display: flex;
-        justify-content: space-between;
-        margin-top: 5rem;
-        flex-direction: column;
-        img{
-            width:100%;
-        }
-        span{
-            margin:auto;
-            padding:1rem;
-            width: 80%;
-            text-align: left;
-            font-size: 1.3rem;
-        }
-    }
+    // .bullet:nth-child(4n){
+    //     // flex-direction: row-reverse;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     margin-top: 5rem;
+    //     flex-direction: column;
+    //     img{
+    //         width:100%;
+    //     }
+    //     span{
+    //         margin:auto;
+    //         padding:1rem;
+    //         width: 80%;
+    //         text-align: left;
+    //         font-size: 1.3rem;
+    //     }
+    // }
 }
 .title{
     font-weight: bold;
@@ -227,21 +227,21 @@
             text-align: center;
         }
     }
-    .bullet:nth-child(4n){
-        justify-content: center;
-        margin-top: 1rem;
-        flex-direction: column;
-        img{
-            width:100%;
-        }
-        span{
-            margin:auto;
-            padding:1rem;
-            width: 100%;
-            text-align: cemter;
-            font-size: 1rem;
-        }
-    }
+    // .bullet:nth-child(4n){
+    //     justify-content: center;
+    //     margin-top: 1rem;
+    //     flex-direction: column;
+    //     img{
+    //         width:100%;
+    //     }
+    //     span{
+    //         margin:auto;
+    //         padding:1rem;
+    //         width: 100%;
+    //         text-align: cemter;
+    //         font-size: 1rem;
+    //     }
+    // }
     .close{
         margin:1rem;
         padding:1.5rem;

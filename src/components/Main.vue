@@ -98,7 +98,8 @@ export default {
       })
     },
     consoleStyle () {
-      var styles = [
+      let message = 'Hey there 👋! Feel free to dig around 🕳, if something catches your eye 👁 or youre curious how I did a thing 🤔, peep my source code at https://github.com/andrewmundy/AndrewMundy2.0 🖥 or send me a message 📬!'
+      let styles = [
         'font-family: arial',
         'border:solid #00ffb7 1px',
         'font-size:20px',
@@ -110,7 +111,7 @@ export default {
         'display: block',
         'padding:25px'
       ].join(';')
-      let message = 'Welcome to andrewmundy dot net 👋! Feel free to dig around 🕳, if something catches your eye 👁 or youre curious how I did a thing 🤔, peep my source code at https://github.com/andrewmundy/AndrewMundy2.0 🖥 or send me a message 📬!'
+
       return console.info(`%c${message} `, styles)
     },
     scrollMeTo (refName) {
