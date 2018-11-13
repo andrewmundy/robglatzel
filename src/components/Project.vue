@@ -3,6 +3,7 @@
     <div class="page section">
         <div class="project-header">
             <div v-html="content.title" class="title"></div>
+
             <p>{{content.fields ? content.fields.join(" &nbsp &nbsp"): null}}</p>
 
             <div class="info">
@@ -40,7 +41,8 @@
 
 
         <!-- <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg"> -->
-        <a class="schedule back" href="/"> back </a>
+        <!-- <a class="schedule back" href="/"> back </a> -->
+        <router-link class="schedule back" to="/">Back</router-link>
       </div>
     <img class="alt-bg" src="../assets/background1-bw.svg">
     <!-- <contact/> -->
@@ -49,6 +51,19 @@
 </template>
 
 <style lang="scss">
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 .close{
     margin: 5rem;
     border: solid 3px black;
@@ -359,7 +374,7 @@
                 //     entries: image
                 // })
             }).catch(function () {
-              console.log('Behance, promise Err')
+            //   console.log('Behance, promise Err')
             })
       },
       parseUrl () {

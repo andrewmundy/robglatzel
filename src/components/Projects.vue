@@ -9,16 +9,13 @@
         </h2>
         <div class="projects">
             <div v-if="project" v-for="project in genre[1].projects.slice(1)" :key="project && project.id" class="project hidden hidden-up" v-infocus="'showElement'">
-                <!-- <router-link to="project"></router-link> -->
-                
-                <a v-bind="{project}" :href="'/#/project/' + project.title" >
-                    <img :src="project && project.img">
-                    <div class="text">
-                        <h1>{{project && project.title}}</h1>
-                        <h2>{{project && project.subtitle}}</h2>
-                        
-                    </div>
-                </a>
+                    <router-link :to="'/project/' + project.title">
+                        <img :src="project && project.img">
+                            <div class="text">
+                                <h1>{{project && project.title}}</h1>
+                                <h2>{{project && project.subtitle}}</h2>  
+                            </div>
+                    </router-link>
             </div>
             <div v-else class="nondisp"></div>
         </div>
