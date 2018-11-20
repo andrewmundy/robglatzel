@@ -2,8 +2,15 @@
     <div class="">
       <div class="header">
         <div class="title hidden hidden-left" v-infocus="'showElement'">
+          
+        <!-- LOGO -->
           <img class="logo" alt="logo" src="../assets/AM_logo.svg"> 
-          <span class="name">ANDREW <br> MUNDY</span>
+        <!-- LOGO -->
+
+        <!-- NAME -->
+          <span class="name">ROBERT <br> GLATZEL</span>
+        <!-- NAME -->
+
         </div>
         <div class="headline"> 
           <span class="hidden hidden-left-fast" v-infocus="'showElement'">{{fireInfo.headline1}}</span>
