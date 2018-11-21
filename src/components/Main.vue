@@ -71,12 +71,12 @@ import Vue from 'vue'
 import firebase from 'firebase'
 import VueFire from 'vuefire'
 let config = {
-  apiKey: process.env.FIRE_KEY,
-  authDomain: 'andrewmundy2-f4194.firebaseapp.com',
-  databaseURL: 'https://andrewmundy2-f4194.firebaseio.com',
-  projectId: 'andrewmundy2-f4194',
-  storageBucket: 'andrewmundy2-f4194.appspot.com',
-  messagingSenderId: '862963492633'
+  apiKey: 'AIzaSyC1Xjh9OhjU5uob_f9-6q-c0JiiPCZWjPs',
+  authDomain: 'robglatzel-5b152.firebaseapp.com',
+  databaseURL: 'https://robglatzel-5b152.firebaseio.com/',
+  projectId: 'robglatzel-5b152',
+  storageBucket: 'robglatzel-5b152.appspot.com',
+  // messagingSenderId: '862963492633'
 }
 
 Vue.use(VueFire)
